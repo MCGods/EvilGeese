@@ -28,6 +28,7 @@ public class GameState : ISerializationCallbackReceiver{
 	public string sceneName;
 	public int playerX;
 	public int playerY;
+	public int money;
 
 	public GameState(){
 		gameStateVars = new Dictionary<string, string> ();
@@ -36,6 +37,7 @@ public class GameState : ISerializationCallbackReceiver{
 		availibleCharacters = new List<CombatCharacterFactory.CombatCharacterPresets> ();
 		currentTeam = new List<CombatCharacterFactory.CombatCharacterPresets> ();
 		inventory = new Dictionary<InventoryItems.itemTypes, int> ();
+		money = 0;
 	}
 
 	public void OnBeforeSerialize(){

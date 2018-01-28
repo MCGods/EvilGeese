@@ -5,6 +5,7 @@ using UnityEngine;
 public class DialogAction {
 	public enum actionType{
 		setGameVar,
+		giveMoney,
 		startCombat,
 		giveItem,
 		setCharacterAvailibility
@@ -12,6 +13,7 @@ public class DialogAction {
 	public actionType ownActionType;
 	public string gameVarName = "";
 	public string gameVarValue = "";
+	public int gameVarNumber = 0;
 	public List<CombatCharacterFactory.CombatCharacterPresets> combatEnemies;
 	public InventoryItems.itemTypes itemType;
 	public int itemAmount;
@@ -28,6 +30,9 @@ public class DialogAction {
 		switch (ownActionType) {
 		case actionType.setGameVar:
 			state.setGameVar (gameVarName, gameVarValue);
+			break;
+		case actionType.giveMoney:
+			state.giveMoney (gameVarNumber);
 			break;
 		case actionType.startCombat:
 			CombatManager.startCombat (combatEnemies);

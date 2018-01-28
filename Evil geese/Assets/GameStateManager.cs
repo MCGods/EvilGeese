@@ -78,6 +78,11 @@ public class GameStateManager : MonoBehaviour{
 		}
 	}
 
+	public void giveMoney(int money) {
+		state.money += money;
+		Debug.Log (money);
+	}
+
 	public void changeItem(InventoryItems.itemTypes itemType, int amount){
 		if (inventory.ContainsKey(itemType)){
 			inventory[itemType] += amount;

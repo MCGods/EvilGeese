@@ -135,7 +135,12 @@ public class DialogEditor : Editor{
 						action.gameVarValue = EditorGUILayout.TextField (action.gameVarValue);
 						EditorGUILayout.EndHorizontal ();
 						break;
-					
+					case DialogAction.actionType.giveMoney:
+						EditorGUILayout.BeginHorizontal ();
+						EditorGUILayout.LabelField ("Money");
+						action.gameVarNumber = EditorGUILayout.IntField (action.gameVarNumber);
+						EditorGUILayout.EndHorizontal ();
+						break;					
 					case DialogAction.actionType.startCombat:
 						int numberOfEnemies = action.combatEnemies.Count;
 						numberOfEnemies = EditorGUILayout.IntSlider (action.combatEnemies.Count, 1, 5);
