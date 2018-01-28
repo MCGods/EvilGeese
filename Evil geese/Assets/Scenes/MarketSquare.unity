@@ -229,33 +229,15 @@ MonoBehaviour:
     dialogText: What do you want?
     optionDescription:
     - I want to come inside
-    - I'm hungry
-    - I want to test the new item system
-    - I want another team member
+    - Nothing actually
     optionPointer:
     - inside
-    - hungry
-    - itemTest
-    - newChar
+    - 
     optionConditional:
     - rightSideComparable: 2
       leftSideComparable: 2
       ownComparison: 0
       rightSide: 
-      leftSide: 
-      rightItemType: 0
-      leftItemType: 0
-    - rightSideComparable: 2
-      leftSideComparable: 2
-      ownComparison: 0
-      rightSide: 
-      leftSide: 
-      rightItemType: 0
-      leftItemType: 0
-    - rightSideComparable: 2
-      leftSideComparable: 1
-      ownComparison: 0
-      rightSide: 1
       leftSide: 
       rightItemType: 0
       leftItemType: 0

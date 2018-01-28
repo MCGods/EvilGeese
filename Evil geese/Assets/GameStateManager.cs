@@ -6,6 +6,9 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 //stores a GameState and provides access to it in a component
+/// <summary>
+/// [EXTENSIONS] - Added getter for money and function to give/take money
+/// </summary>
 public class GameStateManager : MonoBehaviour{
 	public List<CombatCharacterFactory.CombatCharacterPresets> availibleCharacters { 
 		get {return state.availibleCharacters;}
@@ -25,6 +28,13 @@ public class GameStateManager : MonoBehaviour{
 	}
 	public Dictionary<InventoryItems.itemTypes, int> inventory {
 		get {return state.inventory;}
+	}
+	/// <summary>
+	/// [EXTENSION] - Added getter for money
+	/// </summary>
+	/// <value>The current amount of money</value>
+	public int money {
+		get { return state.money; }
 	}
 
 	public bool hasLoaded = false;
@@ -78,6 +88,10 @@ public class GameStateManager : MonoBehaviour{
 		}
 	}
 
+	/// <summary>
+	/// [EXTENSION] Give or take money from the current amount (take specified by a negative value)
+	/// </summary>
+	/// <param name="money">The money to give or take (-ve to take)</param>
 	public void giveMoney(int money) {
 		state.money += money;
 		Debug.Log (money);

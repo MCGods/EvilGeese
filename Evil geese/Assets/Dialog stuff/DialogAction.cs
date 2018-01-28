@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
+/// <summary>
+/// [EXTENSIONS] - Added giveMoney as an action type
+/// </summary>
 public class DialogAction {
 	public enum actionType{
 		setGameVar,
@@ -31,6 +34,7 @@ public class DialogAction {
 		case actionType.setGameVar:
 			state.setGameVar (gameVarName, gameVarValue);
 			break;
+		// [EXTENSION] - Call GameStateManager.giveMoney to give or take the specified money
 		case actionType.giveMoney:
 			state.giveMoney (gameVarNumber);
 			break;
@@ -46,8 +50,8 @@ public class DialogAction {
 					state.availibleCharacters.Add (character);
 				}
 			} else {
-				if (state.availibleCharacters.Contains(character)){
-					state.availibleCharacters.Remove(character);
+				if (state.availibleCharacters.Contains (character)) {
+					state.availibleCharacters.Remove (character);
 				}
 				if (state.currentTeam.Contains (character)) {
 					state.currentTeam.Remove (character);

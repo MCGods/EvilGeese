@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
 //stores the majority of data relating to the current game state
+/// <summary>
+/// [EXTENSIONS] - Added money variable
+/// </summary>
 public class GameState : ISerializationCallbackReceiver{
 	public List<CombatCharacterFactory.CombatCharacterPresets> availibleCharacters;
 	public List<CombatCharacterFactory.CombatCharacterPresets> currentTeam;
@@ -28,6 +31,9 @@ public class GameState : ISerializationCallbackReceiver{
 	public string sceneName;
 	public int playerX;
 	public int playerY;
+	/// <summary>
+	/// [EXTENSION] - The current amount of money the user has
+	/// </summary>
 	public int money;
 
 	public GameState(){

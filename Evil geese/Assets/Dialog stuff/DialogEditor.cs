@@ -6,6 +6,9 @@ using UnityEditor;
 [CustomEditor(typeof(DialogManager))]
 [CanEditMultipleObjects]
 // controls the inspector for dialogManager components
+/// <summary>
+/// [EXTENSIONS] - Added fields for the newly added giveMoney action type
+/// </summary>
 public class DialogEditor : Editor{
 	DialogManager ownDialogManager;
 	DialogElement currentDialogElement;
@@ -135,6 +138,7 @@ public class DialogEditor : Editor{
 						action.gameVarValue = EditorGUILayout.TextField (action.gameVarValue);
 						EditorGUILayout.EndHorizontal ();
 						break;
+					// [EXTENSION] - Added field to enter how much money to give or take
 					case DialogAction.actionType.giveMoney:
 						EditorGUILayout.BeginHorizontal ();
 						EditorGUILayout.LabelField ("Money");

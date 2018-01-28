@@ -4,11 +4,16 @@ using UnityEngine;
 using System;
 [System.Serializable]
 // used to determine whether a dialog option should be shown
+
+/// <summary>
+/// [EXTENSIONS] - Added money as a comparable type
+/// </summary>
 public class DialogConditional {
 	public enum comparableTypes{
 		variable,
 		item,
-		constant
+		constant,
+		money
 	}
 	public enum comparisonTypes{
 		_true, // always true
@@ -36,12 +41,16 @@ public class DialogConditional {
 	public bool evaluate(){
 		string rightSideValue = "";
 		string leftSideValue = "";
+		int leftSideInt = 0;
+		int rightSideInt = 0;
+
 		switch (ownComparison) {
 		case comparisonTypes._true:
 			return true;
 		case comparisonTypes._false:
 			return false;
 		}
+
 		GameStateManager state = GameStateManager.getGameStateManager ();
 		switch (rightSideComparable) {
 		case comparableTypes.constant:
@@ -65,25 +74,31 @@ public class DialogConditional {
 		case comparableTypes.item:
 			leftSideValue = state.getItem (leftItemType).ToString ();
 			break;
+		// [CHANGE] Allow money to be selected as a left-side comparable type
+		case comparableTypes.money:
+			leftSideInt = state.money;
+			break;
 		}
 
 		if (ownComparison == comparisonTypes.eq) {
 			return leftSideValue == rightSideValue;
 		}
 
-		int leftSideInt;
-		int rightSideInt;
+
 		try{
 			rightSideInt = int.Parse(rightSideValue);
 		}catch (FormatException){
 			Debug.LogError ("the right side value: \"" + rightSideValue + "\" is being used in an integer comparison but cannot be converted to an int");
 			return false;
 		}
-		try{
-			leftSideInt = int.Parse(leftSideValue);
-		}catch (FormatException){
-			Debug.LogError ("the left side value: \"" + leftSideValue + "\" is being used in an integer comparison but cannot be converted to an int");
-			return false;
+		// [EXTENSION] if not money (which is already an int), then convert leftSideValue to an int
+		if (leftSideComparable != comparableTypes.money) {
+			try {
+				leftSideInt = int.Parse (leftSideValue);
+			} catch (FormatException) {
+				Debug.LogError ("the left side value: \"" + leftSideValue + "\" is being used in an integer comparison but cannot be converted to an int");
+				return false;
+			}
 		}
 
 		switch (ownComparison) {
