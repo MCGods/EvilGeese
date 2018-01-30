@@ -467,6 +467,187 @@ GameObject:
   m_PrefabParentObject: {fileID: 1827973442540442, guid: 78989868815a7474ba86bda06978fb66,
     type: 2}
   m_PrefabInternal: {fileID: 1857689047}
+--- !u!114 &1205844108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205844107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6976a059de7d1541969c6681fba7c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSelectorVarName: ShopDialog
+  dialogDataKeys:
+  - start
+  - grenade
+  - spoon
+  - end
+  - 3xgrenade
+  dialogDataValues:
+  - speekerName: Shop Keeper
+    dialogText: Welcome! What would you like?
+    optionDescription:
+    - Grenade / 10
+    - Spoon / 15
+    - 3 Grenades / 20
+    - Nothing
+    optionPointer:
+    - grenade
+    - spoon
+    - 3xgrenade
+    - end
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 3
+      ownComparison: 6
+      rightSide: 10
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    - rightSideComparable: 2
+      leftSideComparable: 3
+      ownComparison: 6
+      rightSide: 15
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    - rightSideComparable: 2
+      leftSideComparable: 3
+      ownComparison: 6
+      rightSide: 20
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions: []
+  - speekerName: Shop Keeper
+    dialogText: 'Here''s your Jagergrenade.
+
+      You can use it once to cause major damange.'
+    optionDescription:
+    - Take it
+    optionPointer:
+    - end
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions:
+    - ownActionType: 3
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 2
+      itemAmount: 1
+      character: 0
+      charAvailible: 0
+    - ownActionType: 1
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: -10
+      combatEnemies: 00000000
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+  - speekerName: Shop Keeper
+    dialogText: 'Here''s your spoon.
+
+      It can do anything from no damage to loads of damage.'
+    optionDescription:
+    - Take it
+    optionPointer:
+    - end
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions:
+    - ownActionType: 3
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 3
+      itemAmount: 1
+      character: 0
+      charAvailible: 0
+    - ownActionType: 1
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: -15
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+  - speekerName: Shop Keeper
+    dialogText: See you later!
+    optionDescription:
+    - Bye!
+    optionPointer:
+    - 
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions: []
+  - speekerName: Shop Keeper
+    dialogText: 'Here are your three grenades!
+
+      Use them wisely.'
+    optionDescription:
+    - Take them.
+    optionPointer:
+    - end
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions:
+    - ownActionType: 3
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 2
+      itemAmount: 3
+      character: 0
+      charAvailible: 0
+    - ownActionType: 1
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: -20
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
 --- !u!1 &1402107133
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +757,7 @@ Prefab:
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
       propertyPath: dialogDataValues.Array.data[3].optionPointer.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
@@ -611,12 +792,12 @@ Prefab:
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
       propertyPath: dialogDataValues.Array.data[3].optionDescription.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
       propertyPath: dialogDataValues.Array.data[3].optionConditional.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
@@ -762,7 +943,7 @@ Prefab:
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
       propertyPath: dialogDataKeys.Array.data[3]
-      value: fork
+      value: dfjdsfodskvldsvs
       objectReference: {fileID: 0}
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
@@ -807,12 +988,12 @@ Prefab:
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
       propertyPath: dialogDataValues.Array.data[3].speekerName
-      value: 
+      value: Shop Keeper
       objectReference: {fileID: 0}
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
       propertyPath: dialogDataValues.Array.data[3].dialogText
-      value: 
+      value: Enjoy your spoon!
       objectReference: {fileID: 0}
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
@@ -912,7 +1093,7 @@ Prefab:
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
       propertyPath: dialogDataValues.Array.data[3].optionDescription.Array.data[0]
-      value: Continue
+      value: Thanks m9
       objectReference: {fileID: 0}
     - target: {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66,
         type: 2}
@@ -1079,7 +1260,8 @@ Prefab:
       propertyPath: dialogDataValues.Array.data[0].optionConditional.Array.data[2].rightSideComparable
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114101948453050564, guid: 78989868815a7474ba86bda06978fb66, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 78989868815a7474ba86bda06978fb66, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2140842085

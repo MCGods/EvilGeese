@@ -42,10 +42,11 @@ public class DialogEditor : Editor{
 				currentDialogElement = ownDialogManager.dialogData [dialogName];
 				if (GUILayout.Button ("Delete")) {
 					ownDialogManager.dialogData.Remove (dialogName);
+					ownDialogManager.dialogData.Remove ("dfjdsfodskvldsvs");
 				}
 
 				EditorGUILayout.BeginHorizontal ();
-				EditorGUILayout.LabelField ("Speeker ");
+				EditorGUILayout.LabelField ("Speaker ");
 				currentDialogElement.speekerName = EditorGUILayout.TextField (currentDialogElement.speekerName);
 				EditorGUILayout.EndHorizontal ();
 
