@@ -816,8 +816,8 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
   - speekerName: The Poster
-    dialogText: "Bring them to my office to collect your reward.\nHere are 10 Yoyo
-      points to help you.\r\nYours faithfully"
+    dialogText: "Bring them to my office to collect your reward.\nHere are 3 coins
+      to help you.\r\nYours faithfully"
     optionDescription:
     - Continue
     optionPointer:
@@ -834,7 +834,7 @@ MonoBehaviour:
     - ownActionType: 1
       gameVarName: money
       gameVarValue: 
-      gameVarNumber: 10
+      gameVarNumber: 3
       combatEnemies: 
       itemType: 0
       itemAmount: 0

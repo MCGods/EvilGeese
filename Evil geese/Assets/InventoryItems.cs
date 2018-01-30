@@ -13,7 +13,8 @@ public static class InventoryItems {
 	public enum itemTypes{
 		Beak,
 		PlasticFork,
-		JagerGrenade
+		JagerGrenade,
+		LuckySpoon
 	}
 
 	/// <summary>
@@ -29,6 +30,8 @@ public static class InventoryItems {
 			return "Plastic Fork";
 		case itemTypes.JagerGrenade:
 			return "JägerGrenade";
+		case itemTypes.LuckySpoon:
+			return "Lucky Spoon";
 		default:
 			return "error: invalid item";
 		}
@@ -48,6 +51,8 @@ public static class InventoryItems {
 			return "It's an ordinary plastic fork... why did you keep this?";
 		case itemTypes.JagerGrenade:
 			return "A variation on the Jägerbomb that can cause 30-40 damage";
+		case itemTypes.LuckySpoon:
+			return "Spin the wheel! Does anywhere between 0 and 40 damage";
 		default:
 			return "error: No descrition exists for this item";	
 		}
@@ -70,6 +75,8 @@ public static class InventoryItems {
 			return false;
 		case itemTypes.JagerGrenade:
 			return true;
+		case itemTypes.LuckySpoon:
+			return false;
 		default:
 			return false;
 		}
@@ -89,6 +96,8 @@ public static class InventoryItems {
 			return new SimpleAttack (10, 20, "melee", 0, "Fork Stab");
 		case itemTypes.JagerGrenade:
 			return new SimpleAttack (30, 40, "range", 0, "Grenade Throw");
+		case itemTypes.LuckySpoon:
+			return new SimpleAttack (0, 50, "melee", 0, "flick");
 		default:
 			return null;
 		}

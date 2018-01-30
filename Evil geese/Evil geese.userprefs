@@ -2,20 +2,20 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\InventoryItems.cs">
     <Files>
-      <File FileName="Assets\Dialog stuff\DialogConditional.cs" Line="94" Column="16" />
-      <File FileName="Assets\GameState.cs" Line="35" Column="60" />
-      <File FileName="Assets\GameStateManager.cs" Line="94" Column="65" />
+      <File FileName="Assets\Dialog stuff\DialogConditional.cs" Line="1" Column="1" />
+      <File FileName="Assets\GameState.cs" Line="1" Column="1" />
+      <File FileName="Assets\GameStateManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Dialog stuff\DialogManager.cs" Line="144" Column="20" />
       <File FileName="Assets\Dialog stuff\DialogElement.cs" Line="21" Column="8" />
       <File FileName="Assets\Dialog stuff\DialogAction.cs" Line="37" Column="87" />
-      <File FileName="Assets\Dialog stuff\DialogEditor.cs" Line="10" Column="74" />
+      <File FileName="Assets\Dialog stuff\DialogEditor.cs" Line="45" Column="43" />
       <File FileName="Assets\GameSave.cs" Line="1" Column="1" />
-      <File FileName="Assets\WorldInteraction.cs" Line="41" Column="1" />
+      <File FileName="Assets\WorldInteraction.cs" Line="1" Column="1" />
       <File FileName="Assets\Grid stuff\Grid.cs" Line="1" Column="1" />
-      <File FileName="Assets\CombatStuff\CombatAbility.cs" Line="4" Column="1" />
-      <File FileName="Assets\CombatStuff\abilities\SimpleAttack.cs" Line="7" Column="1" />
-      <File FileName="Assets\InventoryItems.cs" Line="82" Column="54" />
-      <File FileName="Assets\CombatStuff\CombatEffect.cs" Line="34" Column="32" />
+      <File FileName="Assets\CombatStuff\CombatAbility.cs" Line="1" Column="1" />
+      <File FileName="Assets\CombatStuff\abilities\SimpleAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets\InventoryItems.cs" Line="100" Column="33" />
+      <File FileName="Assets\CombatStuff\CombatEffect.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
