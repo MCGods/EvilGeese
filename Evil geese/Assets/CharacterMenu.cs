@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 // handles the character selection menu
+/// <summary>
+/// [EXTENSIONS] - Added text to display the current position of a character in the current team
+/// </summary>
 public class CharacterMenu : MonoBehaviour {
 	GameObject characterButtonPattern;
 	GameObject abilityTextPattern;
@@ -10,6 +13,7 @@ public class CharacterMenu : MonoBehaviour {
 	GameObject characterNameText;
 	GameObject healthText;
 	GameObject energyText;
+	GameObject positionText;
 
 	CombatCharacterFactory.CombatCharacterPresets currentCharacter;
 	GameStateManager state;
@@ -28,6 +32,7 @@ public class CharacterMenu : MonoBehaviour {
 		characterNameText = this.transform.Find ("CharacterNameText").gameObject;
 		healthText = this.transform.Find ("HealthText").gameObject;
 		energyText = this.transform.Find ("EnergyText").gameObject;
+		positionText = this.transform.Find ("PosText").gameObject;
 
 		buttonObjects = new List<GameObject> ();
 		selectCharacter(state.availibleCharacters[0]);
@@ -54,11 +59,16 @@ public class CharacterMenu : MonoBehaviour {
 		
 	}
 
+	/// <summary>
+	/// [EXTENSION] - Call updateDisplayedPosition for the character
+	/// </summary>
+	/// <param name="character">The character</param>
 	public void selectCharacter(CombatCharacterFactory.CombatCharacterPresets character){
 		currentCharacter = character;
 		characterNameText.GetComponent<Text> ().text = CombatCharacterFactory.GetCharacterName (character);
 		healthText.GetComponent<Text> ().text = "Health: " + CombatCharacterFactory.GetCharacterMaxhealth (character).ToString ();
 		energyText.GetComponent<Text> ().text = "Energy: " + CombatCharacterFactory.GetCharacterMaxEnergy (character).ToString ();
+		updateDisplayedPosition (character);
 
 		if (abilityTextObjects != null) {
 			foreach (GameObject o in abilityTextObjects) {
@@ -95,6 +105,26 @@ public class CharacterMenu : MonoBehaviour {
 
 	}
 
+	/// <summary>
+	/// [EXTENSION] - Display the current position of a character in the current team
+	/// If not in current team, display "Not in current team"
+	/// </summary>
+	/// <param name="character">The character</param>
+	public void updateDisplayedPosition(CombatCharacterFactory.CombatCharacterPresets character) {
+		string pos;
+		int index = state.currentTeam.IndexOf (character);
+		if (index >= 0) {
+			pos = (index + 1).ToString ();
+		} else {
+			pos = "Not in current team";
+		}
+		positionText.GetComponent<Text> ().text = "Position: " + pos;
+	}
+
+	/// <summary>
+	/// [EXTENSION] - Also call updateDisplayedPosition to update display to the newly changed order
+	/// </summary>
+	/// <param name="pos">The position to place the team member in</param>
 	public void setCurrentCharacterPositionInTeam(int pos){
 		if (pos >= state.currentTeam.Count) {
 			if (!state.currentTeam.Contains (currentCharacter)) {
@@ -116,6 +146,8 @@ public class CharacterMenu : MonoBehaviour {
 		} else {
 			state.currentTeam [pos] = currentCharacter;
 		}
+
+		updateDisplayedPosition (currentCharacter);
 	}
 
 	public static void open(){
