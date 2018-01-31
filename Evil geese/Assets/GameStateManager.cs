@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 //stores a GameState and provides access to it in a component
 /// <summary>
 /// [EXTENSIONS] - Added getter for money and function to give/take money
+/// [CHANGES] - Changed condition to move player on scene change
 /// </summary>
 public class GameStateManager : MonoBehaviour{
 	public List<CombatCharacterFactory.CombatCharacterPresets> availibleCharacters { 
@@ -29,6 +30,7 @@ public class GameStateManager : MonoBehaviour{
 	public Dictionary<InventoryItems.itemTypes, int> inventory {
 		get {return state.inventory;}
 	}
+
 	/// <summary>
 	/// [EXTENSION] - Added getter for money
 	/// </summary>
@@ -42,6 +44,7 @@ public class GameStateManager : MonoBehaviour{
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log ("I exist");
 		// if a GameStateManager already exists destroy this one;
 		if (GameObject.FindGameObjectsWithTag ("GameStateManager").Length > 1) {
 			Destroy (this.gameObject);
@@ -55,12 +58,19 @@ public class GameStateManager : MonoBehaviour{
 		SceneManager.sceneLoaded += onSceneLoad;
 	}
 
+	/// <summary>
+	/// [CHANGE] - Triggered player position change on any scene except WorldMap so that any scene can have different spawn
+	/// locations (e.g. when leaving Nisa appear outside Nisa doors in market square), without erroring as no player on WorldMap
+	/// </summary>
+	/// <param name="scene">Scene.</param>
+	/// <param name="mode">Mode.</param>
 	void onSceneLoad(Scene scene, LoadSceneMode mode){
 		Debug.Log (scene.name);
-		if (hasLoaded) {
+		if (scene.name != "WorldMap") {
 			hasLoaded = false;
 			try{
 				PlayerMovement movement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+				Debug.Log("X: " + state.playerX);
 				movement.x = state.playerX;
 				movement.y = state.playerY;
 				movement.snapToGridPos();
