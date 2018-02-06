@@ -32,3 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MarketSquare.unity
     guid: 0ae3bd94bc99eb441ae0999a20c47d00
+  - enabled: 1
+    path: Assets/Scenes/InsideNisa.unity
+    guid: fe655106f99ad1f4ba7d79563476aaa8
