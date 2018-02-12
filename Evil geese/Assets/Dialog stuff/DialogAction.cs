@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
 /// <summary>
-/// [EXTENSIONS] - Added giveMoney as an action type
+/// [EXTENSIONS] - Added giveMoney and startMiniGame as an action type
 /// </summary>
 public class DialogAction {
 	public enum actionType{
@@ -11,7 +11,8 @@ public class DialogAction {
 		giveMoney,
 		startCombat,
 		giveItem,
-		setCharacterAvailibility
+		setCharacterAvailibility,
+		startMiniGame
 	}
 	public actionType ownActionType;
 	public string gameVarName = "";
@@ -28,13 +29,15 @@ public class DialogAction {
 		combatEnemies = new List<CombatCharacterFactory.CombatCharacterPresets> ();
 	}
 
+
+	// [EXTENSION] - Call GameStateManager.giveMoney to give or take the specified money if giveMoney selected
+	// [EXTENSION] - Load Goosy Kong scene if startMiniGame selected
 	public void doAction(){
 		GameStateManager state = GameObject.FindGameObjectWithTag ("GameStateManager").GetComponent<GameStateManager> ();
 		switch (ownActionType) {
 		case actionType.setGameVar:
 			state.setGameVar (gameVarName, gameVarValue);
 			break;
-		// [EXTENSION] - Call GameStateManager.giveMoney to give or take the specified money
 		case actionType.giveMoney:
 			state.giveMoney (gameVarNumber);
 			break;
@@ -58,6 +61,10 @@ public class DialogAction {
 				}
 			}
 			break;
+		case actionType.startMiniGame:
+			Debug.Log ("Goosy Kong Fun Times have begun!");
+			break;
 		}
+
 	}
 }

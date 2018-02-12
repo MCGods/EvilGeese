@@ -653,6 +653,129 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1094129274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1094129277}
+  - component: {fileID: 1094129276}
+  - component: {fileID: 1094129275}
+  m_Layer: 0
+  m_Name: ArcadeMachine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1094129275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094129274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6976a059de7d1541969c6681fba7c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSelectorVarName: 
+  dialogDataKeys:
+  - start
+  - play
+  dialogDataValues:
+  - speekerName: Machine
+    dialogText: 'GOOSY KONG
+
+      Enter 3 coins to play
+
+      (Maximum Reward 10 coins!!)'
+    optionDescription:
+    - Play
+    - Stop
+    optionPointer:
+    - play
+    - 
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 3
+      ownComparison: 6
+      rightSide: 3
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions: []
+  - speekerName: Machine
+    dialogText: Come and play anytime!
+    optionDescription:
+    - Stop
+    optionPointer:
+    - 
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions:
+    - ownActionType: 1
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: -3
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+    - ownActionType: 5
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+--- !u!114 &1094129276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094129274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba05fd0888f34e4f8360c77ec524234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownInteractionType: 1
+  enemies: 
+  sceneName: 
+  playerX: 0
+  playerY: 0
+--- !u!4 &1094129277
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1094129274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1133122373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,7 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9399390be8dcfb4abc3036f8b4807ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keys: f9fffffffffffffff8fffffffefffffff8fffffffdfffffff9fffffffcfffffffafffffffcfffffffbfffffffcfffffffcfffffffdfffffffdfffffffdfffffffefffffffdfffffffffffffffcffffff00000000fcffffff01000000fdffffff01000000feffffff02000000feffffff03000000feffffff03000000fdffffff04000000fcffffff05000000fcffffff06000000fcffffff07000000fcffffff08000000fdffffff08000000feffffff08000000ffffffff080000000000000007000000010000000600000001000000050000000100000004000000010000000300000000000000020000000000000001000000000000000000000000000000ffffffff00000000feffffff00000000fdffffff00000000fcffffff00000000fbffffff00000000faffffff0000000006000000fdffffff
+  _keys: f9fffffffffffffff8fffffffefffffff8fffffffdfffffff9fffffffcfffffffafffffffcfffffffbfffffffcfffffffcfffffffdfffffffdfffffffdfffffffefffffffdfffffffffffffffcffffff00000000fcffffff01000000fdffffff01000000feffffff02000000feffffff03000000feffffff03000000fdffffff04000000fcffffff05000000fcffffff06000000fcffffff07000000fcffffff08000000fdffffff08000000feffffff08000000ffffffff080000000000000007000000010000000600000001000000050000000100000004000000010000000300000000000000020000000000000001000000000000000000000000000000ffffffff00000000feffffff00000000fdffffff00000000fcffffff00000000fbffffff00000000faffffff0000000006000000fdffffff07000000ffffffff
   _positions:
   - x: -7
     y: -1
@@ -1208,6 +1331,11 @@ MonoBehaviour:
   - x: 6
     y: -3
     interactionObject: {fileID: 837719899}
+    stepOn: {fileID: 0}
+    blocked: 1
+  - x: 7
+    y: -1
+    interactionObject: {fileID: 1094129274}
     stepOn: {fileID: 0}
     blocked: 1
 --- !u!114 &1402107135
