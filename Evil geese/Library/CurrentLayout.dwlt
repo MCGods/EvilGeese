@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 114
+  controlID: 9
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,8 +254,8 @@ MonoBehaviour:
     y: 0
     width: 282
     height: 635
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -368,28 +368,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 10290000
-    m_LastClickedID: 0
-    m_ExpandedIDs: b2c9faff80f6faff88f6faffd00afbff1c11fbffc62dfbffd02dfbff2a9efbff9aa1fbff08ccfbff12ccfbff340ffcffaeb5fcffc0b5fcffc2b5fcff06f3fcff9639fdffca6efdffdc71fdff8099fdff8a9dfdffb055feffaa89feffa29efeff00a2feff0aa6feff6ca9feffd8adfeff6cb1feffa2b2fefff4b3fefff6b8feff8ac3feff10d7feff34f9feffb208ffffc008ffffc208ffffe847ffffbc4bffff2c61ffffeaf3ffff9efbfffff4ffffff00000000022b0000242b0000402b000078410000ec410000b64b0000
+    m_SelectedIDs: 042b0000
+    m_LastClickedID: 11012
+    m_ExpandedIDs: 9ef6ffff80fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: CombatCanvas
-      m_OriginalName: CombatCanvas
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: -275448
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
-  - CampusTransition
+  - Central Hall
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -421,14 +421,14 @@ MonoBehaviour:
     height: 330
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 5379.778026387581
+  lastFramingTime: 76.8049961264768
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 423.4562, y: 145.2642, z: -3.5625}
+    m_Target: {x: 4.0947595, y: 7.0803328, z: 0}
     speed: 2
-    m_Value: {x: 423.4562, y: 145.2642, z: -3.5625}
+    m_Value: {x: 4.0947595, y: 7.0803328, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -456,9 +456,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 423.3487
+    m_Target: 18.81579
     speed: 2
-    m_Value: 423.3487
+    m_Value: 18.81579
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -536,19 +536,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Location Backgrounds
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Location Backgrounds
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\CyberGW\Documents\Unity\SEPRPhase3\Evil Geese
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 94}
-    m_SelectedIDs: ea290000
-    m_LastClickedID: 10730
-    m_ExpandedIDs: 00000000a8270000262800007c280000c8280000ba2a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 32.523315}
+    m_SelectedIDs: 2c290000
+    m_LastClickedID: 10540
+    m_ExpandedIDs: 00000000b62700003828000094280000e4280000d62a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -576,7 +576,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a82700007c280000c8280000ba2a0000
+    m_ExpandedIDs: 00000000b62700003828000094280000e4280000d62a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
