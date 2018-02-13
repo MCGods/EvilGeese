@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 //handles combat sequences
+
+/// <summary>
+/// [EXTENSIONS] - Play battle music and start and return to main music on exit
+/// </summary>
 public class CombatManager : MonoBehaviour {
 	//TODO visual representation of status effects (CombatEffects)
 
@@ -42,7 +46,11 @@ public class CombatManager : MonoBehaviour {
 
 	float timer = 0f; //timer used to time animations
 
+	/// <summary>
+	/// [EXTENSION] - Start playing battle music
+	/// </summary>
 	void Start () {
+		SoundManager.instance.playBGM ("battle");
 		canvasObj = this.transform.parent.gameObject;
 		WinPanel = this.transform.parent.Find("WinPanel").gameObject;
 		LosePanel = this.transform.parent.Find ("LosePanel").gameObject;
@@ -57,7 +65,7 @@ public class CombatManager : MonoBehaviour {
 				startingCameraPosition = obj.transform.position;
 				sceneCamera = obj;
 				obj.transform.position = new Vector3 (0f, 0f, -10f);
-			} else if (!obj.transform.IsChildOf(this.transform.parent)){
+			} else if (!obj.transform.IsChildOf(this.transform.parent) && obj.name != "AudioManager"){
 				sceneObjects.Add (obj);
 				obj.SetActive (false);
 			}
@@ -262,6 +270,9 @@ public class CombatManager : MonoBehaviour {
 	}
 
 	// function called when the continue button on the victory screen is pressed
+	/// <summary>
+	/// [EXTENSION] - Return to main music after battle over
+	/// </summary>
 	public void doWin(){
 		if (abilitiesPanel != null) {
 			Destroy (abilitiesPanel);
@@ -280,6 +291,8 @@ public class CombatManager : MonoBehaviour {
 
 			sceneCamera.transform.position = startingCameraPosition;
 			Destroy (this.transform.parent.gameObject);
+
+			SoundManager.instance.playBGM ("main");
 		}
 	}
 

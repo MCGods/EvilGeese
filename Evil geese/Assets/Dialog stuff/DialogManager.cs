@@ -4,6 +4,9 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// [EXTENSIONS] - Added sound effect on button press
+/// </summary>
 public class DialogManager : MonoBehaviour, ISerializationCallbackReceiver{
 	public string startSelectorVarName; // the name of the gameState variable that controls which of the above dialogs will be used
 	public Dictionary<string, DialogElement> dialogData = new Dictionary<string, DialogElement>(); // the dictionary that contains all the dialog elements that might be used in this dialog
@@ -104,7 +107,12 @@ public class DialogManager : MonoBehaviour, ISerializationCallbackReceiver{
 		}
 
 	// called when a dialog option is selected
+	/// <summary>
+	/// [EXTENSION] - Add sound effect for every button press
+	/// </summary>
+	/// <param name="option">The option selected</param>
 	public void doDialogOption(string option){
+		SoundManager.instance.playSFX ("interact");
 		if (option == "" || option == "None") {// end dialog if dialog option is a dialog cancel option
 			state.movementEnabled = true;
 			currentDialog = null;

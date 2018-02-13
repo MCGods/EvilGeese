@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 //stores a GameState and provides access to it in a component
 /// <summary>
 /// [EXTENSIONS] - Added getter for money and function to give/take money
+/// 			 - Added sound effect for scene transitions
 /// [CHANGES] - Changed condition to move player on scene change
 /// </summary>
 public class GameStateManager : MonoBehaviour{
@@ -61,10 +62,12 @@ public class GameStateManager : MonoBehaviour{
 	/// <summary>
 	/// [CHANGE] - Triggered player position change on any scene except WorldMap so that any scene can have different spawn
 	/// locations (e.g. when leaving Nisa appear outside Nisa doors in market square), without erroring as no player on WorldMap
+	/// [EXTENSION] - Added sound effect for scene transitions
 	/// </summary>
 	/// <param name="scene">Scene.</param>
 	/// <param name="mode">Mode.</param>
 	void onSceneLoad(Scene scene, LoadSceneMode mode){
+		SoundManager.instance.playSFX ("transition");
 		Debug.Log (scene.name);
 		if (scene.name != "WorldMap") {
 			hasLoaded = false;

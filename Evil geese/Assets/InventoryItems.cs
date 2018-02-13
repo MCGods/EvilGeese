@@ -90,7 +90,6 @@ public static class InventoryItems {
 	public static CombatAbility itemAbility(itemTypes itemType){
 		switch (itemType) {
 		case itemTypes.Beak:
-			Debug.Log ("what does the beak do?");
 			return new SimpleAttack (1, 1, "beak", 0, "Beak Poke");
 		case itemTypes.PlasticFork:
 			return new SimpleAttack (10, 20, "melee", 0, "Fork Stab");

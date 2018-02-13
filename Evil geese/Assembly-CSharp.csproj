@@ -82,6 +82,7 @@
      <Compile Include="Assets\Menu\Scripts\ButtonManager.cs" />
      <Compile Include="Assets\PauseMenuManager.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
+     <Compile Include="Assets\SoundManager.cs" />
      <Compile Include="Assets\Unit tests\CombatSystemTests.cs" />
      <Compile Include="Assets\Unit tests\DialogSystemTests.cs" />
      <Compile Include="Assets\Unit tests\GameStateTests.cs" />
