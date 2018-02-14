@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
+
+/// <summary>
+/// [EXTENSIONS] - Added bonusHealth and bonusAttack stats to allow characters to grow stronger
+/// </summary>
 public static class CombatCharacterFactory {
 	public enum CombatCharacterPresets{// always store an element from this list instead of a CombatCharacter if a variable needs to be serialized
 		BobbyBard,
@@ -12,6 +16,9 @@ public static class CombatCharacterFactory {
 		PamelaPaladin,
 		Goose
 	}
+
+	public static int bonusHealth = 0;
+	public static int bonusAttack = 0;
 
 	public static CombatCharacter MakeCharacter(CombatCharacterPresets characterType){
 		CombatCharacter newCharacter = null;
@@ -54,20 +61,25 @@ public static class CombatCharacterFactory {
 		return "Character name not defined";
 	}
 
+	/// <summary>
+	/// [CHANGES] - For all non-enemy types, add bonusHealth to their base stat
+	/// </summary>
+	/// <returns>The character's maximum health</returns>
+	/// <param name="characterType">The character type</param>
 	public static int GetCharacterMaxhealth(CombatCharacterPresets characterType){
 		switch (characterType) {
 		case CombatCharacterPresets.BobbyBard:
-			return 70;
+			return 70 + bonusHealth;
 		case CombatCharacterPresets.CharlieCleric:
-			return 100;
+			return 100 + bonusHealth;
 		case CombatCharacterPresets.MabelMage:
-			return 130;
+			return 130 + bonusHealth;
 		case CombatCharacterPresets.PamelaPaladin:
-			return 180;
+			return 180 + bonusHealth;
 		case CombatCharacterPresets.WalterWizard:
-			return 100;
+			return 100 + bonusHealth;
 		case CombatCharacterPresets.SusanShapeShifter:
-			return 100;
+			return 100 + bonusHealth;
 		case CombatCharacterPresets.Goose:
 			return 50;
 		}
@@ -125,10 +137,17 @@ public static class CombatCharacterFactory {
 		return abilities;
 	}
 
+	/// <summary>
+	/// [EXTENSION] - Add bonusAttack to max and min stats for any non enemy tpes
+	/// </summary>
+	/// <returns>The character's basic attack</returns>
+	/// <param name="characterType">The character type</param>
 	public static CombatAbility getCharacterBasicAttack(CombatCharacterPresets characterType){
 		switch (characterType) {
-		default:
+		case CombatCharacterPresets.Goose:
 			return new SimpleAttack (20, 30, "melee", 0);
+		default:
+			return new SimpleAttack (20 + bonusAttack, 30 + bonusAttack, "melee", 0);
 		}
 	}
 
