@@ -80,6 +80,7 @@
      <Compile Include="Assets\InputManager.cs" />
      <Compile Include="Assets\InventoryItems.cs" />
      <Compile Include="Assets\Menu\Scripts\ButtonManager.cs" />
+     <Compile Include="Assets\Menu\Scripts\DemoTimer.cs" />
      <Compile Include="Assets\PauseMenuManager.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\SoundManager.cs" />

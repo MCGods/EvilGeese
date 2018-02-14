@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
+/// [EXTENSIONS] - New class to manage background music and sound effects
 /// A script to manage all background music and sound effects in the game
 /// </summary>
 public class SoundManager : MonoBehaviour {
