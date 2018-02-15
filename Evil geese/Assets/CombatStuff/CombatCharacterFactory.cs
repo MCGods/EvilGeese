@@ -10,8 +10,9 @@ public static class CombatCharacterFactory {
 		SusanShapeShifter,
 		WalterWizard,
 		PamelaPaladin,
-		Goose
-	}
+		Goose,
+        ViceChancellor
+	}   
 
 	public static CombatCharacter MakeCharacter(CombatCharacterPresets characterType){
 		CombatCharacter newCharacter = null;
@@ -50,6 +51,8 @@ public static class CombatCharacterFactory {
 			return "Susan The ShapeShifter";
 		case CombatCharacterPresets.Goose:
 			return "Goose";
+        case CombatCharacterPresets.ViceChancellor:
+            return "Vice Chancellor";
 		}
 		return "Character name not defined";
 	}
@@ -70,6 +73,8 @@ public static class CombatCharacterFactory {
 			return 100;
 		case CombatCharacterPresets.Goose:
 			return 50;
+        case CombatCharacterPresets.ViceChancellor:
+            return 1000;
 		}
 		return 1;
 	}
@@ -121,12 +126,16 @@ public static class CombatCharacterFactory {
 			break;
 		case CombatCharacterPresets.Goose:
 			break;
+        case CombatCharacterPresets.ViceChancellor:
+            break;
 		}
 		return abilities;
 	}
 
 	public static CombatAbility getCharacterBasicAttack(CombatCharacterPresets characterType){
 		switch (characterType) {
+            case CombatCharacterPresets.ViceChancellor:
+                return new SimpleAttack(60, 120, "melee", 0);
 		default:
 			return new SimpleAttack (20, 30, "melee", 0);
 		}
@@ -201,6 +210,16 @@ public static class CombatCharacterFactory {
 			frames.Add (Resources.Load<Sprite>("Sprites/Goose"));
 			sprites.Add ("base", frames);
 			break;
+
+        case CombatCharacterPresets.ViceChancellor:
+            frames = new List<Sprite>();
+            frames.Add(Resources.Load<Sprite>("Sprites/ViceChancellor/ViceChancellor"));
+            sprites.Add("base", frames);
+            frames = new List<Sprite>();
+            frames.Add(Resources.Load<Sprite>("Sprites/ViceChancellor/ViceChancellor3"));
+            frames.Add(Resources.Load<Sprite>("Sprites/ViceChancellor/ViceChancellor2"));
+            sprites.Add("attack", frames);
+            break;
 		}
 		return sprites;
 	
