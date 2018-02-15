@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
 /// <summary>
-/// [EXTENSIONS] - Added giveMoney and startMiniGame as an action type
+/// [EXTENSIONS] - Added giveMoney, increaseCharacterHealth, increaseCharacterAttack and startMiniGame as an action type
 /// </summary>
 public class DialogAction {
 	public enum actionType{
@@ -12,6 +12,8 @@ public class DialogAction {
 		startCombat,
 		giveItem,
 		setCharacterAvailibility,
+		increaseCharacterHealth,
+		increaseCharacterAttack,
 		startMiniGame
 	}
 	public actionType ownActionType;
@@ -28,10 +30,13 @@ public class DialogAction {
 	public DialogAction (){
 		combatEnemies = new List<CombatCharacterFactory.CombatCharacterPresets> ();
 	}
-
-
-	// [EXTENSION] - Call GameStateManager.giveMoney to give or take the specified money if giveMoney selected
-	// [EXTENSION] - Load Goosy Kong scene if startMiniGame selected
+		 
+	/// <summary>
+	/// [EXTENSION] - Call GameStateManager.giveMoney to give or take the specified money if giveMoney selected
+	/// 			- Increase CombatCharacterFactory bonusHealth by 10 on increaseCharacterHealth
+	/// 			- Increase CombatCharacterFactory bonusAttack by 5 on increaseCharacterAttack
+	/// 		    - Load Goosy Kong scene if startMiniGame selected
+	/// </summary>
 	public void doAction(){
 		GameStateManager state = GameObject.FindGameObjectWithTag ("GameStateManager").GetComponent<GameStateManager> ();
 		switch (ownActionType) {
@@ -60,6 +65,12 @@ public class DialogAction {
 					state.currentTeam.Remove (character);
 				}
 			}
+			break;
+		case actionType.increaseCharacterHealth:
+			CombatCharacterFactory.bonusHealth += 10;
+			break;
+		case actionType.increaseCharacterAttack:
+			CombatCharacterFactory.bonusAttack += 5;
 			break;
 		case actionType.startMiniGame:
 			Debug.Log ("Goosy Kong Fun Times have begun!");
