@@ -4,4 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Assets4DK/Scenes/EndGame.unity
+    guid: 52de0395f16f54736abca25052bf064f
+  - enabled: 1
+    path: Assets/Assets4DK/Scenes/GKMenu.unity
+    guid: 526cd167a7e0a4cdb97afd6e7c490ffe
+  - enabled: 1
+    path: Assets/Assets4DK/Scenes/Main.unity
+    guid: 48594cc157e324c47acf9eb4bae3b903
+  - enabled: 1
+    path: Assets/Assets4DK/Scenes/Main 1.unity
+    guid: c7b5f61f0123b4ddb88d3d5c6883c523
+  - enabled: 1
+    path: Assets/Assets4DK/Scenes/Main 2.unity
+    guid: 8a30b244842e54436b70647ee2b7157d
