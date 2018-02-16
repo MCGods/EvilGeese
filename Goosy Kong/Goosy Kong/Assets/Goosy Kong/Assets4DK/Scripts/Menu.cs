@@ -31,11 +31,7 @@ public class Menu : MonoBehaviour {
 		quitMenu.enabled = false;
 		exitText.enabled = true;
 	}
-	public void StartGame(){
-		SceneManager.LoadScene("Main");
-		PlayerPrefs.SetInt ("Reward", 0);
 
-	}
 	public void LeaveLevel(){
 		SceneManager.LoadScene ("EndGame");
 	}

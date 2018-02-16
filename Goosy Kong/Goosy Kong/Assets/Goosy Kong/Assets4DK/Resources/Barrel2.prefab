@@ -24,10 +24,6 @@ GameObject:
   - component: {fileID: 50718501574733874}
   - component: {fileID: 114317510086943142}
   - component: {fileID: 114264451499633140}
-  - component: {fileID: 114782098423965120}
-  - component: {fileID: 114642820317053336}
-  - component: {fileID: 114570679984474778}
-  - component: {fileID: 114369541427843194}
   m_Layer: 11
   m_Name: Barrel2
   m_TagString: Untagged
@@ -211,7 +207,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1081785216184764}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 8be6341e1ce3f4cec9902bc34f72d20a, type: 2}
+  m_Material: {fileID: 6200000, guid: 3b59d3c3efcea497b8c5b6bb33c56c55, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -242,52 +238,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name1: Goose
---- !u!114 &114369541427843194
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081785216184764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c38ca36b3372c428f81fd0145b0a6f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name1: Goose
---- !u!114 &114570679984474778
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081785216184764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114642820317053336
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081785216184764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c38ca36b3372c428f81fd0145b0a6f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name1: Goose
---- !u!114 &114782098423965120
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1081785216184764}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212086807640775588
 SpriteRenderer:
   m_ObjectHideFlags: 1

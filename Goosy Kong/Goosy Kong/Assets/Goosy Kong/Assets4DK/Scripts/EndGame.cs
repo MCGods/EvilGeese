@@ -11,6 +11,7 @@ public class EndGame : MonoBehaviour {
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.name == "Goose") {
+			Debug.Log ("Failed mate");
 			x = PlayerPrefs.GetInt ("Reward");
 			x = x + 30;
 			PlayerPrefs.SetInt ("Reward", x);

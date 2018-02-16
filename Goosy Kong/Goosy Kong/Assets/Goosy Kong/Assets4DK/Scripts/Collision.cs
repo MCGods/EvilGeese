@@ -11,9 +11,8 @@ public class Collision : MonoBehaviour {
 	{
 		if (other.gameObject.name == name1)
 		{
+			Debug.Log ("Here");
 			SceneManager.LoadScene("EndGame");
-
-
 		}
 	}
 

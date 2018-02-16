@@ -6,24 +6,41 @@ using UnityEngine.SceneManagement;
 
 
 public class Portal : MonoBehaviour {
-
+	public string leaveGame;
 	public int currentScene;
 	private int nextScene;
-	public Text moneyText;
+
 	private int x;
+
+	public Text money;
 
 
 	// Use this for initialization
 	void Start () {
 		DisplayMoney ();
+
 	}
 
+	public void StartGame(){
+		SceneManager.LoadScene("Main");
+		PlayerPrefs.SetInt ("Reward", 0);
 
+	}
+	public void LeaveGame(string leaveGame){
+		SceneManager.LoadScene (leaveGame);
+
+	}
+	public void LeaveToMain(){
+		GameStateManager state = GameObject.Find ("GameStateManager").GetComponent<GameStateManager> ();
+		state.giveMoney (PlayerPrefs.GetInt ("Reward"));
+		SceneManager.LoadScene ("GKMenu");
+	}
 
 
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "Goose") {
+			
 			if(currentScene == 0){
 				x = PlayerPrefs.GetInt ("Reward");
 				x = x + 5;
@@ -47,9 +64,8 @@ public class Portal : MonoBehaviour {
 		}
 	}
 	void DisplayMoney(){
-		moneyText.text = "Money: " + PlayerPrefs.GetInt ("Reward").ToString ();
+		money.text = "Money: " + PlayerPrefs.GetInt ("Reward").ToString ();
 
-	
 	}
 	
 	// Update is called once per frame

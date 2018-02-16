@@ -76,7 +76,7 @@ public class DialogAction {
 			break;
 		case actionType.startMiniGame:
 			Debug.Log ("Minigame");
-			SceneManager.LoadScene ("Assets4DK/Scenes/GKMenu");
+			SceneManager.LoadScene ("Goosy Kong/Assets4DK/Scenes/GKMenu");
 			break;
 		}
 

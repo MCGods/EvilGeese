@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 504, y: 492}
+  m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 30
+  controlID: 122
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,14 +64,14 @@ MonoBehaviour:
     y: 0
     width: 280
     height: 635
-  m_MinSize: {x: 100, y: 100}
+  m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -660,20 +660,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Assets4DK/Scenes
+    - Assets/Main Game/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Assets4DK/Scenes
+  - Assets/Main Game/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\CyberGW\Documents\Unity\SEPRPhase3\EvilGeese\Goosy Kong\Goosy
     Kong
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31.962572}
-    m_SelectedIDs: 5a550000
-    m_LastClickedID: 21850
-    m_ExpandedIDs: 00000000043b00002c3f00002853000092530000fa530000d2540000d85400002856000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 340}
+    m_SelectedIDs: 082c0000
+    m_LastClickedID: 11272
+    m_ExpandedIDs: 00000000b0280000202900008e2900006a2a0000702a0000d22b0000ea2d0000ec2d0000f83a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -701,7 +701,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000043b00002c3f00002853000092530000fa530000d2540000d854000028560000
+    m_ExpandedIDs: 00000000b0280000202900008e2900006a2a0000702a0000d22b0000ea2d0000ec2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -729,7 +729,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000
+    m_ExpandedInstanceIDs: c62300007e280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -819,28 +819,28 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 94530000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 8ee6ffffd6ecffff06f4ffff76f9ffff00000000
+    m_SelectedIDs: d4b70000
+    m_LastClickedID: 47060
+    m_ExpandedIDs: a808fbff260ffbff360ffbff9620fbffd83cfbff2845fbffaa5dfbff4867fbff7068fbff7692fbff5c97fbff582cfcffda3efcff004ffcffee4ffcff9a51fcff3089fcff98b1fcffb4f7fcff4826fdff5027fdff1adafeffcc04ffff7217ffff5e22fffffc3cffff1247ffff8048ffffb45dfffffa5effff5268ffff52c7ffff52d3ffff92f6ffff1cfbfffff4ffffff00000000fc380000c6510000c05c0000105d000062660000ae6600007a85000050990000e69e00005c9f0000a09f0000f8a4000040a8000054aa0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Goose
+      m_OriginalName: Goose
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 40778
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - Main
+  - GlassHouse
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -872,14 +872,14 @@ MonoBehaviour:
     height: 336
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 528.9011268319178
+  lastFramingTime: 2482.4521171359984
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.577565, y: 10.816556, z: 0.1171875}
+    m_Target: {x: 0.20335248, y: 5.4498563, z: -0.011098717}
     speed: 2
-    m_Value: {x: 6.577565, y: 10.816556, z: 0.1171875}
+    m_Value: {x: 0.20335248, y: 5.4498563, z: -0.011098717}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -907,9 +907,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.367738
+    m_Target: 2.9926422
     speed: 2
-    m_Value: 10.367738
+    m_Value: 2.9926422
   m_Ortho:
     m_Target: 1
     speed: 2

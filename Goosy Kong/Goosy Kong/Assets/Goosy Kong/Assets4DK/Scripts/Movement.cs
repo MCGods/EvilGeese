@@ -5,6 +5,8 @@ using UnityEngine;
 public class Movement : MonoBehaviour {
 	public float moveSpeed;
 	public float jumpHeight;
+	public GameObject goose;
+	public bool facingRight;
 
 	public Transform groundCheck;
 	public float groundCheckRadius;
@@ -15,6 +17,9 @@ public class Movement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		facingRight = true;
+		
+
 		
 	}
 
@@ -30,11 +35,25 @@ public class Movement : MonoBehaviour {
 		}
 		if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+			if ((facingRight) == false) {
+				Vector3 theScale = transform.localScale;
+				theScale.x *= -1;
+				goose.transform.localScale = theScale;
+				facingRight = true;
+			}
+
+				
 
 		}
 		if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-moveSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-
+			if ((facingRight) == true) {
+				Vector3 theScale = transform.localScale;
+				theScale.x *= -1;
+				goose.transform.localScale = theScale;
+				facingRight = false;
+			}
+		
 		}
 
 	}
@@ -43,5 +62,12 @@ public class Movement : MonoBehaviour {
 		GetComponent<Rigidbody2D> ().velocity = new Vector2 (GetComponent<Rigidbody2D> ().velocity.x, jumpHeight);
 
 	}
-}
+	public void Flip(){
+		facingRight = !facingRight;
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+
+	}
+} 
 

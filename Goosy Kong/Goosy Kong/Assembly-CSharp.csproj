@@ -51,16 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Assets4DK\Fonts\Script\scriptTexttest.cs" />
-     <Compile Include="Assets\Assets4DK\Scripts\bar.cs" />
-     <Compile Include="Assets\Assets4DK\Scripts\Collision.cs" />
-     <Compile Include="Assets\Assets4DK\Scripts\DestoryClone.cs" />
-     <Compile Include="Assets\Assets4DK\Scripts\EndGame.cs" />
-     <Compile Include="Assets\Assets4DK\Scripts\Menu.cs" />
-     <Compile Include="Assets\Assets4DK\Scripts\Movement.cs" />
-     <Compile Include="Assets\Assets4DK\Scripts\Portal.cs" />
-     <Compile Include="Assets\Assets4DK\Scripts\RestartUponDeath.cs" />
-     <Compile Include="Assets\Flag.cs" />
+     <Compile Include="Assets\Goosy Kong\Assets4DK\Fonts\Script\scriptTexttest.cs" />
+     <Compile Include="Assets\Goosy Kong\Assets4DK\Scripts\bar.cs" />
+     <Compile Include="Assets\Goosy Kong\Assets4DK\Scripts\Collision.cs" />
+     <Compile Include="Assets\Goosy Kong\Assets4DK\Scripts\DestoryClone.cs" />
+     <Compile Include="Assets\Goosy Kong\Assets4DK\Scripts\EndGame.cs" />
+     <Compile Include="Assets\Goosy Kong\Assets4DK\Scripts\Menu.cs" />
+     <Compile Include="Assets\Goosy Kong\Assets4DK\Scripts\Movement.cs" />
+     <Compile Include="Assets\Goosy Kong\Assets4DK\Scripts\Portal.cs" />
+     <Compile Include="Assets\Goosy Kong\Assets4DK\Scripts\RestartUponDeath.cs" />
+     <Compile Include="Assets\Goosy Kong\Assets4DK\Scripts\Start.cs" />
+     <Compile Include="Assets\Goosy Kong\Flag.cs" />
      <Compile Include="Assets\Main Game\AnimationLoop.cs" />
      <Compile Include="Assets\Main Game\BlockGridGameVar.cs" />
      <Compile Include="Assets\Main Game\CameraFollow.cs" />
@@ -100,11 +101,8 @@
      <Compile Include="Assets\Main Game\Unit tests\GridSystemTests.cs" />
      <Compile Include="Assets\Main Game\WorldInteraction.cs" />
      <Compile Include="Assets\Main Game\WorldMap\WorldMapButton.cs" />
-     <None Include="Assets\Assets4DK\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
-     <None Include="Assets\Assets4DK\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
- <Reference Include="Assembly-CSharp-firstpass">
- <HintPath>C:/Users/CyberGW/Documents/Unity/SEPRPhase3/EvilGeese/Goosy Kong/Goosy Kong/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
- </Reference>
+     <None Include="Assets\Goosy Kong\Assets4DK\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
+     <None Include="Assets\Goosy Kong\Assets4DK\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

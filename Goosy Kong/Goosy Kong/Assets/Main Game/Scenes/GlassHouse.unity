@@ -207,6 +207,11 @@ Prefab:
       propertyPath: state.currentTeam.Array.data[0]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114729010611386790, guid: d407bc6b3aaa52146ac4de7d6f7232fb,
+        type: 2}
+      propertyPath: state.money
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d407bc6b3aaa52146ac4de7d6f7232fb, type: 2}
   m_IsPrefabParent: 0
@@ -814,9 +819,7 @@ MonoBehaviour:
   - speekerName: Machine
     dialogText: 'GOOSY KONG
 
-      Enter 3 coins to play
-
-      (Maximum Reward 10 coins!!)'
+      Play a classic arcade game and win big money!'
     optionDescription:
     - Play
     - Stop
@@ -826,7 +829,7 @@ MonoBehaviour:
     optionConditional:
     - rightSideComparable: 2
       leftSideComparable: 3
-      ownComparison: 6
+      ownComparison: 0
       rightSide: 3
       leftSide: 
       rightItemType: 0
@@ -854,15 +857,6 @@ MonoBehaviour:
       rightItemType: 0
       leftItemType: 0
     actions:
-    - ownActionType: 1
-      gameVarName: 
-      gameVarValue: 
-      gameVarNumber: -3
-      combatEnemies: 
-      itemType: 0
-      itemAmount: 0
-      character: 0
-      charAvailible: 0
     - ownActionType: 7
       gameVarName: 
       gameVarValue: 
@@ -1148,7 +1142,9 @@ MonoBehaviour:
       other campus though...
 
 
-      Bar Person seems eager to shift their wares.'
+      Bar Person seems eager to shift their wares.
+
+      But that arcade machine looks appealing...'
     optionDescription:
     - Continue
     optionPointer:
