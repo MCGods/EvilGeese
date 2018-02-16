@@ -56,6 +56,10 @@ public class GameStateTests {
 		}
 	}
 
+	/// <summary>
+	/// [EXTENSION] - Test money is saved
+	/// </summary>
+	/// <returns>The state saves correctly.</returns>
 	[UnityTest]
 	public IEnumerator GameStateSavesCorrectly(){
 		setupGameStateManagerForTests();
@@ -70,6 +74,7 @@ public class GameStateTests {
 		foreach (InventoryItems.itemTypes item  in items) {
 			state.changeItem (item, 1);
 		}
+		state.giveMoney (1);
 		state.setGameVar ("test", "testValue");
 		state.state.sceneName = SceneManager.GetActiveScene ().name;
 		state.saveState ("testSave");// save
@@ -86,8 +91,23 @@ public class GameStateTests {
 		foreach (InventoryItems.itemTypes item  in items) {
 			Assert.AreEqual (1, state.getItem(item)); //check inventory was loaded
 		}
-
+		Assert.AreEqual (1, state.money);
 	}
 
+	/// <summary>
+	/// [EXTENSION] - Test money can change
+	/// </summary>
+	[UnityTest]
+	public IEnumerator GameStateRetainsMoney(){
+		setupGameStateManagerForTests();
+		yield return null;
+		GameStateManager state = GameStateManager.getGameStateManager ();
+		state.state = new GameState(); //reset the gamestate
 
+		Assert.AreEqual (0, state.money);
+		state.giveMoney (2);
+		Assert.AreEqual (2, state.money);
+		state.giveMoney (-1);
+		Assert.AreEqual (1, state.money);
+	}
 }

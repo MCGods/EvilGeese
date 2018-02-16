@@ -80,4 +80,24 @@ public class DialogSystemTests {
 		cond.ownComparison = DialogConditional.comparisonTypes._false;
 		Assert.False(cond.evaluate());
 	}
+
+	/// <summary>
+	/// [EXTENSION] - Added tests for money dialog conditional
+	/// </summary>
+	[UnityTest]
+	public IEnumerator DialogSystemConditionalMoneyEvaluations() {
+		GameStateTests.setupGameStateManagerForTests ();// dialog conditionals require a gameStateManager
+		yield return null;
+		GameStateManager state = GameStateManager.getGameStateManager ();
+		state.state = new GameState (); // reset the gamestate
+		DialogConditional cond = new DialogConditional ();
+		cond.leftSideComparable = DialogConditional.comparableTypes.money;
+		state.giveMoney (1);
+		cond.rightSideComparable = DialogConditional.comparableTypes.constant;
+		cond.rightSide = "1";
+		cond.ownComparison = DialogConditional.comparisonTypes.gt;
+		Assert.False (cond.evaluate ());
+		cond.ownComparison = DialogConditional.comparisonTypes.ge;
+		Assert.True (cond.evaluate ());
+	}
 }
