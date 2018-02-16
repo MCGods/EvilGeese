@@ -220,7 +220,6 @@ GameObject:
   - component: {fileID: 120463382}
   - component: {fileID: 120463381}
   - component: {fileID: 120463380}
-  - component: {fileID: 120463379}
   - component: {fileID: 120463378}
   m_Layer: 0
   m_Name: GooseInteraction (1)
@@ -336,20 +335,6 @@ MonoBehaviour:
       itemAmount: 0
       character: 0
       charAvailible: 0
---- !u!114 &120463379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 120463377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking1
-  Values:
-  - false
 --- !u!114 &120463380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 208831699}
   - component: {fileID: 208831698}
+  - component: {fileID: 208831700}
   m_Layer: 0
   m_Name: Goose
   m_TagString: Untagged
@@ -468,6 +454,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &208831700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208831697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameVariable: GooseBlocking
+  Values: []
 --- !u!1 &827956597
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1029358282}
   - component: {fileID: 1029358281}
+  - component: {fileID: 1029358283}
   m_Layer: 0
   m_Name: Goose (1)
   m_TagString: Untagged
@@ -833,6 +833,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1029358283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029358280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameVariable: GooseBlocking1
+  Values: []
 --- !u!1 &1364887328
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +856,6 @@ GameObject:
   - component: {fileID: 1364887333}
   - component: {fileID: 1364887332}
   - component: {fileID: 1364887331}
-  - component: {fileID: 1364887330}
   - component: {fileID: 1364887329}
   m_Layer: 0
   m_Name: GooseInteraction
@@ -959,20 +971,6 @@ MonoBehaviour:
       itemAmount: 0
       character: 0
       charAvailible: 0
---- !u!114 &1364887330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1364887328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking
-  Values:
-  - false
 --- !u!114 &1364887331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1312,7 +1310,6 @@ GameObject:
   - component: {fileID: 1647686332}
   - component: {fileID: 1647686331}
   - component: {fileID: 1647686330}
-  - component: {fileID: 1647686329}
   - component: {fileID: 1647686328}
   m_Layer: 0
   m_Name: GooseInteraction (2)
@@ -1428,20 +1425,6 @@ MonoBehaviour:
       itemAmount: 0
       character: 0
       charAvailible: 0
---- !u!114 &1647686329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1647686327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking2
-  Values:
-  - false
 --- !u!114 &1647686330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1496,6 +1479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1677312766}
   - component: {fileID: 1677312765}
+  - component: {fileID: 1677312767}
   m_Layer: 0
   m_Name: Goose (2)
   m_TagString: Untagged
@@ -1560,6 +1544,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677312767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1677312764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameVariable: GooseBlocking2
+  Values: []
 --- !u!1001 &1757881942
 Prefab:
   m_ObjectHideFlags: 0

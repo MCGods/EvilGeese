@@ -256,7 +256,7 @@ Prefab:
     - target: {fileID: 114743831959801826, guid: 301195212572c5c439834b2080246e95,
         type: 2}
       propertyPath: sceneName
-      value: MarketSquare
+      value: Scenes/MarketSquare
       objectReference: {fileID: 0}
     - target: {fileID: 114743831959801826, guid: 301195212572c5c439834b2080246e95,
         type: 2}
@@ -271,6 +271,136 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 301195212572c5c439834b2080246e95, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &149608301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 149608304}
+  - component: {fileID: 149608303}
+  - component: {fileID: 149608302}
+  m_Layer: 0
+  m_Name: WalterDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &149608302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 149608301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6976a059de7d1541969c6681fba7c18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSelectorVarName: WalterDialogVar
+  dialogDataKeys:
+  - start
+  - gain
+  dialogDataValues:
+  - speekerName: Walter
+    dialogText: 'Hello. I hear you are on a mission currently.
+
+      I can help, but not for free...'
+    optionDescription:
+    - Pay 20 coins
+    - No thanks
+    optionPointer:
+    - gain
+    - 
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 3
+      ownComparison: 6
+      rightSide: 20
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions: []
+  - speekerName: Walter
+    dialogText: Thank you. I shall do everything I can to help you.
+    optionDescription:
+    - Continue
+    optionPointer:
+    - 
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions:
+    - ownActionType: 1
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: -20
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+    - ownActionType: 0
+      gameVarName: WalterDialogVar
+      gameVarValue: gain
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+    - ownActionType: 4
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 4
+      charAvailible: 1
+--- !u!114 &149608303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 149608301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ba05fd0888f34e4f8360c77ec524234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownInteractionType: 1
+  enemies: 
+  sceneName: 
+  playerX: 0
+  playerY: 0
+--- !u!4 &149608304
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 149608301}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &467237820 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1297755692631270, guid: 301195212572c5c439834b2080246e95,
@@ -1189,6 +1319,79 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1006129829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1006129831}
+  - component: {fileID: 1006129830}
+  m_Layer: 0
+  m_Name: c3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1006129830
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006129829}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 1623435185
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 9aa8acfd94958c54eb4009401599edd1, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+--- !u!4 &1006129831
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006129829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.02, y: 6.09, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1015143664
 Prefab:
   m_ObjectHideFlags: 0
@@ -1455,7 +1658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9399390be8dcfb4abc3036f8b4807ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _keys: 0100000001000000010000000200000001000000030000000100000004000000ffffffff050000000100000005000000ffffffff04000000ffffffff03000000ffffffff02000000ffffffff01000000fdffffff01000000fdffffff02000000fdffffff03000000fdffffff04000000fdffffff05000000fbffffff05000000fbffffff04000000fbffffff03000000fbffffff02000000fbffffff01000000f9ffffff01000000f9ffffff02000000f9ffffff03000000f9ffffff04000000f9ffffff05000000f9ffffff06000000f7ffffff06000000f7ffffff05000000f7ffffff04000000f7ffffff03000000f7ffffff02000000f7ffffff01000000f7ffffff00000000f7fffffffffffffff8fffffffffffffff9fffffffffffffffafffffffffffffffbfffffffffffffffcfffffffffffffffdfffffffffffffffeffffffffffffffffffffffffffffff01000000ffffffff02000000ffffffff0200000000000000020000000600000001000000070000000000000007000000ffffffff07000000feffffff07000000fdffffff07000000fcffffff07000000fbffffff07000000faffffff07000000f8ffffff0400000000000000ffffffff
+  _keys: 0100000001000000010000000200000001000000030000000100000004000000ffffffff050000000100000005000000ffffffff04000000ffffffff03000000ffffffff02000000ffffffff01000000fdffffff01000000fdffffff02000000fdffffff03000000fdffffff04000000fdffffff05000000fbffffff05000000fbffffff04000000fbffffff03000000fbffffff02000000fbffffff01000000f9ffffff01000000f9ffffff02000000f9ffffff03000000f9ffffff04000000f9ffffff05000000f9ffffff06000000f7ffffff06000000f7ffffff05000000f7ffffff04000000f7ffffff03000000f7ffffff02000000f7ffffff01000000f7ffffff00000000f7fffffffffffffff8fffffffffffffff9fffffffffffffffafffffffffffffffbfffffffffffffffcfffffffffffffffdfffffffffffffffeffffffffffffffffffffffffffffff01000000ffffffff02000000ffffffff0200000000000000020000000600000001000000070000000000000007000000ffffffff07000000feffffff07000000fdffffff07000000fcffffff07000000fbffffff07000000faffffff07000000f8ffffff0400000000000000ffffffff0100000006000000
   _positions:
   - x: 1
     y: 1
@@ -1737,6 +1940,11 @@ MonoBehaviour:
     interactionObject: {fileID: 0}
     stepOn: {fileID: 467237820}
     blocked: 0
+  - x: 1
+    y: 6
+    interactionObject: {fileID: 149608301}
+    stepOn: {fileID: 0}
+    blocked: 1
 --- !u!114 &1402107135
 MonoBehaviour:
   m_ObjectHideFlags: 0

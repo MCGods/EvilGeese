@@ -66,7 +66,7 @@ public class GameStateTests {
 		yield return null;
 		GameStateManager state = GameStateManager.getGameStateManager ();
 		state.state = new GameState(); //reset the gamestate
-		SceneManager.LoadScene ("Scenes/ComputerScience");// has to be in a scene included in the build options for loading to work
+		SceneManager.LoadScene ("Main Game/Scenes/ComputerScience");// has to be in a scene included in the build options for loading to work
 		yield return null;
 
 		InventoryItems.itemTypes[] items =(InventoryItems.itemTypes[]) Enum.GetValues (typeof(InventoryItems.itemTypes));

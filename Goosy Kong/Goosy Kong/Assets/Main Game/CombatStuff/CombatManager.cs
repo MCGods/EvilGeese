@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 /// <summary>
 /// [EXTENSIONS] - Play battle music and start and return to main music on exit
+/// 			 - Explicity set character sprite's sorting layer
 /// </summary>
 public class CombatManager : MonoBehaviour {
 	//TODO visual representation of status effects (CombatEffects)
@@ -48,6 +49,7 @@ public class CombatManager : MonoBehaviour {
 
 	/// <summary>
 	/// [EXTENSION] - Start playing battle music
+	/// 			- Explicity set character sprites to "Player" level so they appear above background
 	/// </summary>
 	void Start () {
 		SoundManager.instance.playBGM ("battle");
@@ -101,6 +103,7 @@ public class CombatManager : MonoBehaviour {
 		Vector3 offset = new Vector3(0,-2); // arbitrary offset
 		foreach (CombatCharacter c in frendlyChars) {
 			GameObject obj = GameObject.Instantiate(combatEntityPrefab, pos, new Quaternion());
+			obj.GetComponent<SpriteRenderer> ().sortingLayerName = "Player";
 			c.entity = obj.GetComponent<CombatEntity> ();
 			c.entity.setupBars (false, true);
 			c.updateEntityBars ();
@@ -110,6 +113,7 @@ public class CombatManager : MonoBehaviour {
 		pos = new Vector3 (4, 3); // arbitrary start position 
 		foreach (CombatCharacter c in enemyChars) {
 			GameObject obj = GameObject.Instantiate(combatEntityPrefab, pos, new Quaternion());
+			obj.GetComponent<SpriteRenderer> ().sortingLayerName = "Player";
 			c.entity = obj.GetComponent<CombatEntity> ();
 			c.entity.setupBars (true, false);
 			c.updateEntityBars ();
@@ -298,7 +302,7 @@ public class CombatManager : MonoBehaviour {
 
 	// function called when the continue button on the defeat screen is pressed
 	public void doLose(){
-		SceneManager.LoadScene ("Scenes/MenuScene");
+		SceneManager.LoadScene ("Main Game/Scenes/MenuScene");
 	}
 
 	// function called when an item button on the items panel is pressed

@@ -953,8 +953,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 859156021}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.05, y: 12.15, z: 0}
-  m_LocalScale: {x: 5.969576, y: 5.969587, z: 1}
+  m_LocalPosition: {x: 2.97, y: 11.94, z: 0}
+  m_LocalScale: {x: 1.5479438, y: 1.5479467, z: 0.2593055}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -1980,7 +1980,7 @@ MonoBehaviour:
     blocked: 0
   - x: 3
     y: 12
-    interactionObject: {fileID: 0}
+    interactionObject: {fileID: 590102512}
     stepOn: {fileID: 0}
     blocked: 1
   - x: 2

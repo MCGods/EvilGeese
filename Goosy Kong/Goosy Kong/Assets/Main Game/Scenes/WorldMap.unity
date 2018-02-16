@@ -1900,8 +1900,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   varibleName: PhysicsUnlocked
   defaultState: 0
-  sceneName: Main Game/Scenes/CampusTransition
-  playerX: 7
+  sceneName: Main Game/Scenes/Physics
+  playerX: -1
   playerY: 0
 --- !u!114 &1777244270
 MonoBehaviour:
@@ -2309,7 +2309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cbbe084350f64a8185da52eefdfa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  varibleName: BioloyUnlocked
+  varibleName: BiologyUnlocked
   defaultState: 0
   sceneName: Main Game/Scenes/Biology
   playerX: 0

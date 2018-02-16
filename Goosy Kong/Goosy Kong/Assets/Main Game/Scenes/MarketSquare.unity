@@ -1117,12 +1117,12 @@ Prefab:
     - target: {fileID: 114320829461604492, guid: faa8d91e6267e38469b2bb9ba86a0fba,
         type: 2}
       propertyPath: dialogDataValues.Array.data[0].actions.Array.data[0].gameVarNumber
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114320829461604492, guid: faa8d91e6267e38469b2bb9ba86a0fba,
         type: 2}
       propertyPath: dialogDataValues.Array.data[0].dialogText
-      value: You got 5 coins!
+      value: You got 10 coins!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: faa8d91e6267e38469b2bb9ba86a0fba, type: 2}
@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownInteractionType: 2
   enemies: 
-  sceneName: InsideNisa
+  sceneName: Scenes/InsideNisa
   playerX: 0
   playerY: 0
 --- !u!4 &1545884816
@@ -1480,7 +1480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownInteractionType: 2
   enemies: 
-  sceneName: WorldMap
+  sceneName: Scenes/WorldMap
   playerX: 0
   playerY: 0
 --- !u!1001 &2020558212

@@ -1202,6 +1202,7 @@ MonoBehaviour:
   dialogDataKeys:
   - start
   - dialog1
+  - dialog2
   dialogDataValues:
   - speekerName: You
     dialogText: Hello! Are you ok?
@@ -1222,14 +1223,51 @@ MonoBehaviour:
     dialogText: He appears to be unconscious. Maybe you need to find something to
       wake him up.
     optionDescription:
-    - 
+    - Use beak
+    - Continue
     optionPointer:
+    - dialog2
     - 
     optionConditional:
     - rightSideComparable: 2
       leftSideComparable: 1
       ownComparison: 6
       rightSide: 1
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions:
+    - ownActionType: 0
+      gameVarName: BiologyUnlocked
+      gameVarValue: true
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+  - speekerName: The Narrator
+    dialogText: 'The beak has no effect.
+
+      It appears he''s not in a coma, but has just pulled an all-nighter...
+
+      Probably best to leave alone.'
+    optionDescription:
+    - Continue
+    optionPointer:
+    - 
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
       leftSide: 
       rightItemType: 0
       leftItemType: 0

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 [System.Serializable]
 /// <summary>
 /// [EXTENSIONS] - Added giveMoney, increaseCharacterHealth, increaseCharacterAttack and startMiniGame as an action type
@@ -73,7 +75,8 @@ public class DialogAction {
 			CombatCharacterFactory.bonusAttack += 5;
 			break;
 		case actionType.startMiniGame:
-			Debug.Log ("Goosy Kong Fun Times have begun!");
+			Debug.Log ("Minigame");
+			SceneManager.LoadScene ("Assets4DK/Scenes/GKMenu");
 			break;
 		}
 

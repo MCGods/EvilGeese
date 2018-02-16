@@ -60,8 +60,9 @@ public class GameStateManager : MonoBehaviour{
 	}
 
 	/// <summary>
-	/// [CHANGE] - Triggered player position change on any scene except WorldMap so that any scene can have different spawn
-	/// locations (e.g. when leaving Nisa appear outside Nisa doors in market square), without erroring as no player on WorldMap
+	/// [CHANGE] - Triggered player position change on any scene except the listed scens wit
+	/// no player so that any scene can have different spawn locations (e.g. when leaving Nisa appear outside 
+	/// Nisa doors in market square), without erroring as no player on WorldMap
 	/// [EXTENSION] - Added sound effect for scene transitions
 	/// </summary>
 	/// <param name="scene">Scene.</param>
@@ -69,7 +70,8 @@ public class GameStateManager : MonoBehaviour{
 	void onSceneLoad(Scene scene, LoadSceneMode mode){
 		SoundManager.instance.playSFX ("transition");
 		Debug.Log (scene.name);
-		if (scene.name != "WorldMap") {
+		string[] nonPlayerMaps = new string[] {"WorldMap", "GKMenu", "Main", "Main 1", "Main 2"};
+		if (!Array.Exists(nonPlayerMaps, element => element.Equals(scene.name))) {
 			hasLoaded = false;
 			try{
 				PlayerMovement movement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();

@@ -249,6 +249,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212968098951826896, guid: b8a4c47b289be69428013cc72c31e249,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1623435185
+      objectReference: {fileID: 0}
+    - target: {fileID: 212968098951826896, guid: b8a4c47b289be69428013cc72c31e249,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8a4c47b289be69428013cc72c31e249, type: 2}
   m_IsPrefabParent: 0
@@ -853,7 +863,7 @@ MonoBehaviour:
       itemAmount: 0
       character: 0
       charAvailible: 0
-    - ownActionType: 5
+    - ownActionType: 7
       gameVarName: 
       gameVarValue: 
       gameVarNumber: 0
@@ -1524,12 +1534,12 @@ Prefab:
     - target: {fileID: 114320829461604492, guid: faa8d91e6267e38469b2bb9ba86a0fba,
         type: 2}
       propertyPath: dialogDataValues.Array.data[0].dialogText
-      value: You got 3 coins!
+      value: You got 6 coins!
       objectReference: {fileID: 0}
     - target: {fileID: 114320829461604492, guid: faa8d91e6267e38469b2bb9ba86a0fba,
         type: 2}
       propertyPath: dialogDataValues.Array.data[0].actions.Array.data[0].gameVarNumber
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114320829461604492, guid: faa8d91e6267e38469b2bb9ba86a0fba,
         type: 2}
