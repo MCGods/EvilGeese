@@ -57,6 +57,7 @@
      <Compile Include="Assets\Assets4DK\Scripts\DestoryClone.cs" />
      <Compile Include="Assets\Assets4DK\Scripts\EndGame.cs" />
      <Compile Include="Assets\Assets4DK\Scripts\Menu.cs" />
+     <Compile Include="Assets\Assets4DK\Scripts\Movement.cs" />
      <Compile Include="Assets\Assets4DK\Scripts\Portal.cs" />
      <Compile Include="Assets\Assets4DK\Scripts\RestartUponDeath.cs" />
      <Compile Include="Assets\Flag.cs" />
@@ -99,17 +100,11 @@
      <Compile Include="Assets\Main Game\Unit tests\GridSystemTests.cs" />
      <Compile Include="Assets\Main Game\WorldInteraction.cs" />
      <Compile Include="Assets\Main Game\WorldMap\WorldMapButton.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
-     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
-     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
      <None Include="Assets\Assets4DK\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
      <None Include="Assets\Assets4DK\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
-     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
+ <Reference Include="Assembly-CSharp-firstpass">
+ <HintPath>C:/Users/CyberGW/Documents/Unity/SEPRPhase3/EvilGeese/Goosy Kong/Goosy Kong/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -194,10 +189,6 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/CyberGW/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{E5C4CDD4-699D-86DE-E40F-A031286F9C4F}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
