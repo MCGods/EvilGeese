@@ -1007,7 +1007,6 @@ MonoBehaviour:
   - dialog6
   - dialog7
   - dialog8
-  - shop
   dialogDataValues:
   - speekerName: You
     dialogText: "What\u2019s happened here?"
@@ -1160,7 +1159,7 @@ MonoBehaviour:
     actions:
     - ownActionType: 0
       gameVarName: GlassHouseDialog
-      gameVarValue: shop
+      gameVarValue: None
       gameVarNumber: 0
       combatEnemies: 
       itemType: 0
@@ -1185,21 +1184,6 @@ MonoBehaviour:
       itemAmount: 0
       character: 0
       charAvailible: 0
-  - speekerName: Bar Person
-    dialogText: '*** filler text, add wares for sale ***'
-    optionDescription:
-    - No Thanks
-    optionPointer:
-    - 
-    optionConditional:
-    - rightSideComparable: 2
-      leftSideComparable: 2
-      ownComparison: 0
-      rightSide: 
-      leftSide: 
-      rightItemType: 0
-      leftItemType: 0
-    actions: []
 --- !u!114 &1371023429
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -50,6 +50,10 @@ public class ButtonManager : MonoBehaviour {
 		SceneManager.LoadScene (state.state.sceneName);
 	}
 
+	public void muteButton() {
+		SoundManager.instance.soundOn ();
+	}
+
 	// quits the game, called when the exit game button is pressed
 	public void ExitGameBtn(){
 		Application.Quit ();

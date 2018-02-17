@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6976a059de7d1541969c6681fba7c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSelectorVarName: 
+  startSelectorVarName: PersonDialog2
   dialogDataKeys:
   - start
   - dialog
@@ -962,15 +962,6 @@ MonoBehaviour:
       leftItemType: 0
     actions:
     - ownActionType: 0
-      gameVarName: PersonDialog2
-      gameVarValue: None
-      gameVarNumber: 0
-      combatEnemies: 
-      itemType: 0
-      itemAmount: 0
-      character: 0
-      charAvailible: 0
-    - ownActionType: 0
       gameVarName: BiologyUnlocked
       gameVarValue: true
       gameVarNumber: 0
@@ -979,9 +970,9 @@ MonoBehaviour:
       itemAmount: 0
       character: 0
       charAvailible: 0
-  - speekerName: Mabel
-    dialogText: Hello. Thank you for waking me up. I am the mage known as Mabel and
-      I will join you on your quest
+  - speekerName: Susan
+    dialogText: Hello. Thank you for waking me up. I am the shape shifter known as
+      Susan and I will join you on your quest
     optionDescription:
     - Continue
     optionPointer:
@@ -1011,12 +1002,21 @@ MonoBehaviour:
       combatEnemies: 
       itemType: 0
       itemAmount: 0
-      character: 2
+      character: 3
       charAvailible: 1
+    - ownActionType: 0
+      gameVarName: PersonDialog2
+      gameVarValue: None
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
   - speekerName: The Narrator
     dialogText: Once a Philosophy student who Ascended to a higher state of being
-      after a really interesting seminar. Mabel has the power to take energy from
-      the spiritual plane and propel it towards her foes
+      after a really interesting seminar. Susan has the power to take energy from
+      the spiritual plane use it to transform into a physical form of that spirit
     optionDescription:
     - Continue
     optionPointer:
@@ -1040,7 +1040,7 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
   - speekerName: Info
-    dialogText: Mabel has joined your team!
+    dialogText: Susan has joined your team!
     optionDescription:
     - Continue
     optionPointer:
@@ -1055,7 +1055,7 @@ MonoBehaviour:
       leftItemType: 0
     actions:
     - ownActionType: 0
-      gameVarName: MabelComa
+      gameVarName: SusanComa
       gameVarValue: false
       gameVarNumber: 0
       combatEnemies: 
@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameVariable: MabelComa
+  gameVariable: SusanComa
   Values:
   - false
 --- !u!1 &1850911890

@@ -108,12 +108,15 @@ public class DialogManager : MonoBehaviour, ISerializationCallbackReceiver{
 
 	// called when a dialog option is selected
 	/// <summary>
-	/// [EXTENSION] - Add sound effect for every button press
+	/// [EXTENSION] - Add sound effect for all button presses
 	/// </summary>
 	/// <param name="option">The option selected</param>
 	public void doDialogOption(string option){
-		SoundManager.instance.playSFX ("interact");
 		if (option == "" || option == "None") {// end dialog if dialog option is a dialog cancel option
+			//Only play sound effect is there was just dialog (e.g. not on a None dialoge pointer)
+			if (currentDialog != null) {
+				SoundManager.instance.playSFX ("interact");
+			}
 			state.movementEnabled = true;
 			currentDialog = null;
 			Destroy (dialogCanvasObj);
@@ -130,6 +133,7 @@ public class DialogManager : MonoBehaviour, ISerializationCallbackReceiver{
 			Debug.Log ("Dialog error, node: \"" + option + "\" does not exist, ending dialog");
 			doDialogOption (""); // ends dialog, see above
 		}else{
+			SoundManager.instance.playSFX ("interact");
 			currentDialog = dialogData [option];
 		}
 		foreach (DialogAction action in currentDialog.actions) {
@@ -146,7 +150,7 @@ public class DialogManager : MonoBehaviour, ISerializationCallbackReceiver{
 		}
 	}
 
-	public void OnAfterDeserialize(){
+	public void OnAfterDeserialize() {
 		dialogData = new Dictionary<string, DialogElement> ();
 		for (int i = 0; i < dialogDataKeys.Count; i++) {
 			dialogData.Add (dialogDataKeys [i], dialogDataValues [i]);

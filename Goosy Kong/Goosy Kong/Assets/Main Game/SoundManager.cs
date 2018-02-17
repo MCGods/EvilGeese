@@ -60,10 +60,9 @@ public class SoundManager : MonoBehaviour {
 	/// <summary>
 	/// Turn sound on and off
 	/// </summary>
-	/// <param name="val">If set to <c>true</c>, plays music. Otherwise play no sounds.</param>
-	public void soundOn(bool val) {
-		BGMSource.mute = !val;
-		SFXSource.mute = !val;
+	public void soundOn() {
+		BGMSource.mute = !BGMSource.mute;
+		SFXSource.mute = !SFXSource.mute;
 	}
 
 }

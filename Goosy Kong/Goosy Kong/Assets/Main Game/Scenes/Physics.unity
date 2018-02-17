@@ -1613,6 +1613,7 @@ GameObject:
   - component: {fileID: 1944712801}
   - component: {fileID: 1944712800}
   - component: {fileID: 1944712799}
+  - component: {fileID: 1944712803}
   m_Layer: 0
   m_Name: E7
   m_TagString: Untagged
@@ -1636,6 +1637,7 @@ MonoBehaviour:
   - start
   - dialog1
   - description
+  - end
   dialogDataValues:
   - speekerName: The Narrator
     dialogText: It's another unconscious student
@@ -1661,9 +1663,11 @@ MonoBehaviour:
       rightItemType: 0
       leftItemType: 0
     actions: []
-  - speekerName: Charlie
+  - speekerName: Pamela
     dialogText: 'Hello. Thank you for saving me! I will join you on your adventure.
-      My name is Charlie the Cleric. I specialise in healing abilities '
+      My name is Pamela the Paladin
+
+      . I specialise in attack abilities.'
     optionDescription:
     - Continue
     optionPointer:
@@ -1693,7 +1697,7 @@ MonoBehaviour:
       combatEnemies: 
       itemType: 0
       itemAmount: 0
-      character: 1
+      character: 5
       charAvailible: 1
     - ownActionType: 0
       gameVarName: CentralHallUnlocked
@@ -1705,9 +1709,25 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
   - speekerName: The Narrator
-    dialogText: Once a Biology student, Charlie discovered his healing ability one
-      day in a practical when he accidentally brought one of the rats back to life
-      after dissecting it. From this day on he vowed to protect those in need
+    dialogText: 'Physics student Pamela discoverd her strong powers one day when a
+      Van de Graaff generator short fused on her.
+
+      She now vows to only use her power for good.. and the occasional prank.'
+    optionDescription:
+    - Continue
+    optionPointer:
+    - end
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions: []
+  - speekerName: Info
+    dialogText: Pamela has joined your team!
     optionDescription:
     - Continue
     optionPointer:
@@ -1720,7 +1740,16 @@ MonoBehaviour:
       leftSide: 
       rightItemType: 0
       leftItemType: 0
-    actions: []
+    actions:
+    - ownActionType: 0
+      gameVarName: PamelaComa
+      gameVarValue: false
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
 --- !u!114 &1944712800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1794,6 +1823,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944712803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1944712798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameVariable: PamelaComa
+  Values:
+  - false
 --- !u!1 &2136524899
 GameObject:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ public class CombatManager : MonoBehaviour {
 
 	/// <summary>
 	/// [EXTENSION] - Start playing battle music
-	/// 			- Explicity set character sprites to "Player" level so they appear above background
+	/// 			- Explicity set character sprites and canvas to "Player" level
 	/// </summary>
 	void Start () {
 		SoundManager.instance.playBGM ("battle");
@@ -64,6 +64,7 @@ public class CombatManager : MonoBehaviour {
 		foreach (GameObject obj in GameObject.FindObjectsOfType<GameObject>()) {
 			if (obj.tag == "MainCamera") {
 				canvasObj.GetComponent<Canvas> ().worldCamera = obj.GetComponent<Camera> ();
+				canvasObj.GetComponent<Canvas> ().sortingLayerName = "Player";
 				startingCameraPosition = obj.transform.position;
 				sceneCamera = obj;
 				obj.transform.position = new Vector3 (0f, 0f, -10f);
