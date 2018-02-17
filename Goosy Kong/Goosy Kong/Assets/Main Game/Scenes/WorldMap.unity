@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   varibleName: MarketSquareUnlocked
-  defaultState: 1
+  defaultState: 0
   sceneName: Main Game/Scenes/MarketSquare
   playerX: 0
   playerY: 0
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   varibleName: CentralHallUnlocked
   defaultState: 0
   sceneName: Main Game/Scenes/Central Hall
-  playerX: 7
+  playerX: 0
   playerY: 0
 --- !u!114 &1015763953
 MonoBehaviour:
@@ -1325,7 +1325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.57433337, y: 0.40710902}
   m_AnchorMax: {x: 0.6716667, y: 0.46241233}
-  m_AnchoredPosition: {x: -528, y: -29}
+  m_AnchoredPosition: {x: -469.2, y: 99.3}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1019601760
@@ -1374,7 +1374,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Physics
+  m_Text: Central Hall
 --- !u!222 &1019601762
 CanvasRenderer:
   m_ObjectHideFlags: 0

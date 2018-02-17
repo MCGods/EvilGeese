@@ -303,6 +303,7 @@ MonoBehaviour:
   dialogDataKeys:
   - start
   - gain
+  - backstory
   dialogDataValues:
   - speekerName: Walter
     dialogText: 'Hello. I hear you are on a mission currently.
@@ -335,7 +336,7 @@ MonoBehaviour:
     optionDescription:
     - Continue
     optionPointer:
-    - 
+    - backstory
     optionConditional:
     - rightSideComparable: 2
       leftSideComparable: 2
@@ -356,7 +357,7 @@ MonoBehaviour:
       charAvailible: 0
     - ownActionType: 0
       gameVarName: WalterDialogVar
-      gameVarValue: gain
+      gameVarValue: backstory
       gameVarNumber: 0
       combatEnemies: 
       itemType: 0
@@ -372,6 +373,32 @@ MonoBehaviour:
       itemAmount: 0
       character: 4
       charAvailible: 1
+  - speekerName: The Narrator
+    dialogText: "Once a Chemistry student at the University, Walter decided to drop
+      out of his course in order to pursue the life of a wizard. His \u2018spells\u2019
+      are really just chemical reactions that he has pre-prepared"
+    optionDescription:
+    - Continue
+    optionPointer:
+    - 
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions:
+    - ownActionType: 0
+      gameVarName: WalterDialogue
+      gameVarValue: None
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
 --- !u!114 &149608303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,7 +1121,7 @@ MonoBehaviour:
     dialogText: Hello! Would you like a special energy drink?
     optionDescription:
     - Increase Health / 15
-    - Increas Attack / 20
+    - Increase Attack / 20
     - Nothing
     optionPointer:
     - health

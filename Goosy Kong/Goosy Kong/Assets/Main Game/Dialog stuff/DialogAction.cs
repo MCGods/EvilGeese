@@ -16,7 +16,8 @@ public class DialogAction {
 		setCharacterAvailibility,
 		increaseCharacterHealth,
 		increaseCharacterAttack,
-		startMiniGame
+		startMiniGame,
+		endGame
 	}
 	public actionType ownActionType;
 	public string gameVarName = "";
@@ -76,7 +77,12 @@ public class DialogAction {
 			break;
 		case actionType.startMiniGame:
 			Debug.Log ("Minigame");
+			SoundManager.instance.playBGM ("minigame");
 			SceneManager.LoadScene ("Goosy Kong/Assets4DK/Scenes/GKMenu");
+			break;
+		case actionType.endGame:
+			SoundManager.instance.playBGM ("victory");
+			SceneManager.LoadScene ("Finish Game Screen");
 			break;
 		}
 

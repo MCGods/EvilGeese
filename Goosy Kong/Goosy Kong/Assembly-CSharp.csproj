@@ -81,6 +81,7 @@
      <Compile Include="Assets\Main Game\Dialog stuff\DialogEditor.cs" />
      <Compile Include="Assets\Main Game\Dialog stuff\DialogElement.cs" />
      <Compile Include="Assets\Main Game\Dialog stuff\DialogManager.cs" />
+     <Compile Include="Assets\Main Game\EndGameScript.cs" />
      <Compile Include="Assets\Main Game\GameSave.cs" />
      <Compile Include="Assets\Main Game\GameState.cs" />
      <Compile Include="Assets\Main Game\GameStateManager.cs" />

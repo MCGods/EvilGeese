@@ -298,7 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking2
+  gameVariable: CGooseBlocking2
   Values:
   - false
 --- !u!114 &459429414
@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 2
   y: 3
-  gameVar: GooseBlocking2
+  gameVar: CGooseBlocking2
   value: true
   invert: 0
 --- !u!114 &459429415
@@ -382,7 +382,7 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
     - ownActionType: 0
-      gameVarName: GooseInteraction2
+      gameVarName: CGooseInteraction2
       gameVarValue: None
       gameVarNumber: 0
       combatEnemies: 
@@ -450,6 +450,7 @@ MonoBehaviour:
   - dialog3
   - combat
   - dialog4
+  - end
   dialogDataValues:
   - speekerName: Vice Chancellor
     dialogText: 'So you finally made it here protagonists. Yes, it is me that has
@@ -529,7 +530,7 @@ MonoBehaviour:
     optionDescription:
     - Continue
     optionPointer:
-    - 
+    - end
     optionConditional:
     - rightSideComparable: 2
       leftSideComparable: 2
@@ -542,6 +543,21 @@ MonoBehaviour:
     - ownActionType: 0
       gameVarName: FinalBossInteraction
       gameVarValue: None
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+  - speekerName: 
+    dialogText: 
+    optionDescription: []
+    optionPointer: []
+    optionConditional: []
+    actions:
+    - ownActionType: 8
+      gameVarName: 
+      gameVarValue: 
       gameVarNumber: 0
       combatEnemies: 
       itemType: 0
@@ -769,7 +785,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking5
+  gameVariable: CGooseBlocking5
   Values:
   - false
 --- !u!114 &829132194
@@ -785,7 +801,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 3
   y: 9
-  gameVar: GooseBlocking5
+  gameVar: CGooseBlocking5
   value: true
   invert: 0
 --- !u!114 &829132195
@@ -853,7 +869,7 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
     - ownActionType: 0
-      gameVarName: GooseInteraction5
+      gameVarName: CGooseInteraction5
       gameVarValue: None
       gameVarNumber: 0
       combatEnemies: 
@@ -1276,7 +1292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking4
+  gameVariable: CGooseBlocking4
   Values:
   - false
 --- !u!114 &1296111410
@@ -1292,7 +1308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: -3
   y: 7
-  gameVar: GooseBlocking4
+  gameVar: CGooseBlocking4
   value: true
   invert: 0
 --- !u!114 &1296111411
@@ -1360,7 +1376,7 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
     - ownActionType: 0
-      gameVarName: GooseInteraction4
+      gameVarName: CGooseInteraction4
       gameVarValue: None
       gameVarNumber: 0
       combatEnemies: 
@@ -1620,8 +1636,8 @@ MonoBehaviour:
     blocked: 1
   - x: 0
     y: -1
-    interactionObject: {fileID: 2136524899}
-    stepOn: {fileID: 0}
+    interactionObject: {fileID: 0}
+    stepOn: {fileID: 2136524899}
     blocked: 0
   - x: -1
     y: 0
@@ -2162,7 +2178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking
+  gameVariable: CGooseBlocking
   Values:
   - false
 --- !u!114 &1988636593
@@ -2178,7 +2194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 4
   y: 1
-  gameVar: GooseBlocking
+  gameVar: CGooseBlocking
   value: True
   invert: 0
 --- !u!114 &1988636594
@@ -2255,7 +2271,7 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
     - ownActionType: 0
-      gameVarName: GooseBlocking
+      gameVarName: CGooseBlocking
       gameVarValue: false
       gameVarNumber: 0
       combatEnemies: 
@@ -2367,7 +2383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking3
+  gameVariable: CGooseBlocking3
   Values:
   - false
 --- !u!114 &2024723819
@@ -2383,7 +2399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 6
   y: 5
-  gameVar: GooseBlocking3
+  gameVar: CGooseBlocking3
   value: true
   invert: 0
 --- !u!114 &2024723820
@@ -2451,7 +2467,7 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
     - ownActionType: 0
-      gameVarName: GooseInteraction3
+      gameVarName: CGooseInteraction3
       gameVarValue: None
       gameVarNumber: 0
       combatEnemies: 

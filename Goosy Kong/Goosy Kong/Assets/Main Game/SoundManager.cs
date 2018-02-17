@@ -36,6 +36,7 @@ public class SoundManager : MonoBehaviour {
 		backgroundMusic.Add ("main", Resources.Load ("Audio/bgm", typeof(AudioClip)) as AudioClip);
 		backgroundMusic.Add ("battle", Resources.Load ("Audio/battle", typeof(AudioClip)) as AudioClip);
 		backgroundMusic.Add ("victory", Resources.Load ("Audio/victory", typeof(AudioClip)) as AudioClip);
+		backgroundMusic.Add ("minigame", Resources.Load ("Audio/minigame", typeof(AudioClip)) as AudioClip);
 	}
 
 	/// <summary>

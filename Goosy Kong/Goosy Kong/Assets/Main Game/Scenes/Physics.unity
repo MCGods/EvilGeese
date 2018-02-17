@@ -285,7 +285,7 @@ MonoBehaviour:
       leftItemType: 0
     actions:
     - ownActionType: 0
-      gameVarName: GooseBlocking1
+      gameVarName: PGooseBlocking1
       gameVarValue: false
       gameVarNumber: 0
       combatEnemies: 
@@ -465,8 +465,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking
-  Values: []
+  gameVariable: PGooseBlocking
+  Values:
+  - false
 --- !u!1 &827956597
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,8 +845,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking1
-  Values: []
+  gameVariable: PGooseBlocking1
+  Values:
+  - false
 --- !u!1 &1364887328
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +923,7 @@ MonoBehaviour:
       leftItemType: 0
     actions:
     - ownActionType: 0
-      gameVarName: GooseBlocking
+      gameVarName: PGooseBlocking
       gameVarValue: false
       gameVarNumber: 0
       combatEnemies: 
@@ -1375,7 +1377,7 @@ MonoBehaviour:
       leftItemType: 0
     actions:
     - ownActionType: 0
-      gameVarName: GooseBlocking2
+      gameVarName: PGooseBlocking2
       gameVarValue: false
       gameVarNumber: 0
       combatEnemies: 
@@ -1555,8 +1557,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameVariable: GooseBlocking2
-  Values: []
+  gameVariable: PGooseBlocking2
+  Values:
+  - false
 --- !u!1001 &1757881942
 Prefab:
   m_ObjectHideFlags: 0
@@ -1632,6 +1635,7 @@ MonoBehaviour:
   dialogDataKeys:
   - start
   - dialog1
+  - description
   dialogDataValues:
   - speekerName: The Narrator
     dialogText: It's another unconscious student
@@ -1660,9 +1664,18 @@ MonoBehaviour:
   - speekerName: Charlie
     dialogText: 'Hello. Thank you for saving me! I will join you on your adventure.
       My name is Charlie the Cleric. I specialise in healing abilities '
-    optionDescription: []
-    optionPointer: []
-    optionConditional: []
+    optionDescription:
+    - Continue
+    optionPointer:
+    - description
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
     actions:
     - ownActionType: 0
       gameVarName: E7
@@ -1684,13 +1697,30 @@ MonoBehaviour:
       charAvailible: 1
     - ownActionType: 0
       gameVarName: CentralHallUnlocked
-      gameVarValue: True
+      gameVarValue: true
       gameVarNumber: 0
       combatEnemies: 
       itemType: 0
       itemAmount: 0
       character: 0
       charAvailible: 0
+  - speekerName: The Narrator
+    dialogText: Once a Biology student, Charlie discovered his healing ability one
+      day in a practical when he accidentally brought one of the rats back to life
+      after dissecting it. From this day on he vowed to protect those in need
+    optionDescription:
+    - Continue
+    optionPointer:
+    - 
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions: []
 --- !u!114 &1944712800
 MonoBehaviour:
   m_ObjectHideFlags: 0

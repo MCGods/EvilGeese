@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Main Game/Scenes/GlassHouse.unity
+- path: Assets/Main Game/Scenes/Central Hall.unity
   isLoaded: 1
   isActive: 1

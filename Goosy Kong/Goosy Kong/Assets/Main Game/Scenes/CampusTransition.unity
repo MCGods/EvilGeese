@@ -989,6 +989,15 @@ MonoBehaviour:
       itemAmount: 0
       character: 0
       charAvailible: 0
+    - ownActionType: 0
+      gameVarName: MarketSquareUnlocked
+      gameVarValue: true
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
 --- !u!114 &1950430428
 MonoBehaviour:
   m_ObjectHideFlags: 0

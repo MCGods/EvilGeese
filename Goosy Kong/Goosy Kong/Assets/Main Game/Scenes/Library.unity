@@ -918,6 +918,8 @@ MonoBehaviour:
   - start
   - dialog
   - dialog2
+  - description
+  - end
   dialogDataValues:
   - speekerName: You
     dialogText: Hello! Are you ok?
@@ -983,7 +985,7 @@ MonoBehaviour:
     optionDescription:
     - Continue
     optionPointer:
-    - 
+    - description
     optionConditional:
     - rightSideComparable: 2
       leftSideComparable: 2
@@ -1011,6 +1013,56 @@ MonoBehaviour:
       itemAmount: 0
       character: 2
       charAvailible: 1
+  - speekerName: The Narrator
+    dialogText: Once a Philosophy student who Ascended to a higher state of being
+      after a really interesting seminar. Mabel has the power to take energy from
+      the spiritual plane and propel it towards her foes
+    optionDescription:
+    - Continue
+    optionPointer:
+    - end
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions:
+    - ownActionType: 0
+      gameVarName: PersonDialog2
+      gameVarValue: None
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+  - speekerName: Info
+    dialogText: Mabel has joined your team!
+    optionDescription:
+    - Continue
+    optionPointer:
+    - 
+    optionConditional:
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
+    actions:
+    - ownActionType: 0
+      gameVarName: MabelComa
+      gameVarValue: false
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
 --- !u!4 &1468603374
 Transform:
   m_ObjectHideFlags: 0
@@ -1106,6 +1158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1758407084}
   - component: {fileID: 1758407083}
+  - component: {fileID: 1758407085}
   m_Layer: 0
   m_Name: B7
   m_TagString: Untagged
@@ -1170,6 +1223,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1758407085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1758407082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3afab324e1c9948b1b1db5313ae561, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameVariable: MabelComa
+  Values:
+  - false
 --- !u!1 &1850911890
 GameObject:
   m_ObjectHideFlags: 0

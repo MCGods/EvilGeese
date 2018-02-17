@@ -1,7 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 // handles the pasue menu
+/// <summary>
+/// [EXTENSIONS] - Menu now shows current amount of money
+/// </summary>
 public class PauseMenuManager : MonoBehaviour {
 	GameStateManager state;
 	PlayerMovement movement;
@@ -10,11 +15,15 @@ public class PauseMenuManager : MonoBehaviour {
 	public GameObject loadPanel;
 
 	// Use this for initialization
+	/// <summary>
+	/// [EXTENSION] - Update money text to correct value
+	/// </summary>
 	void Start () {
 		state = GameStateManager.getGameStateManager ();
 		state.movementEnabled = false;
 		state.isPaused = true;
 		movement = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerMovement> ();
+		GameObject.Find ("MoneyText").GetComponent<Text> ().text = "Money: " + state.money;
 	}
 
 	// resumes the game

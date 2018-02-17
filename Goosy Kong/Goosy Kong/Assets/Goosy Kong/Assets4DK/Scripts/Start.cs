@@ -16,6 +16,7 @@ public class Start : MonoBehaviour {
 		GameState state = GameStateManager.getGameStateManager ().state;
 		state.playerX = 6;
 		state.playerY = -1;
+		SoundManager.instance.playBGM ("main");
 		SceneManager.LoadScene ("Main Game/Scenes/Glasshouse");
 
 	}
