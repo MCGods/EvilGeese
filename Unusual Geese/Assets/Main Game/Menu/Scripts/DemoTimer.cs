@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 /// <summary>
-/// [EXTENSION] - New class to provide a time limit while playing game demo 
+/// [EXTENSIONS] - New class to provide a time limit while playing game demo 
 /// </summary>
 public class DemoTimer : MonoBehaviour {
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 [System.Serializable]
 /// <summary>
-/// [EXTENSIONS] - Added giveMoney, increaseCharacterHealth, increaseCharacterAttack and startMiniGame as an action type
+/// [EXTENSIONS] - Added giveMoney, increaseCharacterHealth, increaseCharacterAttack, startMiniGame and endGame as an action type
 /// </summary>
 public class DialogAction {
 	public enum actionType{

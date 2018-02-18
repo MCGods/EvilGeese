@@ -4,7 +4,7 @@ using UnityEngine;
 // stores the data for the various inventory item types
 
 /// <summary>
-/// [EXTENSIONS] - Added new item types: JagerGrenade
+/// [EXTENSIONS] - Added new item types: JagerGrenade and LuckySpoon
 /// </summary>
 public static class InventoryItems {
 	/// <summary>

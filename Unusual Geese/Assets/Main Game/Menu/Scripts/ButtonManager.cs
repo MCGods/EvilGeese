@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// [CHANGES] - Now used for the canvas for loading a game from the main menu as well
 /// [EXTENSIONS] - Added functions for load button and loading saves
+/// 			 - Added mute button
 /// 			 - Added sound effect on button press
 /// </summary>
 public class ButtonManager : MonoBehaviour {

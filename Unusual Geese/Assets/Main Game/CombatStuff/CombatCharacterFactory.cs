@@ -5,6 +5,8 @@ using UnityEngine;
 
 /// <summary>
 /// [EXTENSIONS] - Added bonusHealth and bonusAttack stats to allow characters to grow stronger
+/// [CHANGES] - Changed BobbyBard character type
+/// 		  - Add bonus health to character types so that they can become stronger
 /// </summary>
 public static class CombatCharacterFactory {
 	public enum CombatCharacterPresets{// always store an element from this list instead of a CombatCharacter if a variable needs to be serialized
@@ -21,19 +23,16 @@ public static class CombatCharacterFactory {
 	public static int bonusHealth = 0;
 	public static int bonusAttack = 0;
 
+	/// <summary>
+	/// [CHANGE] - Remove feature setting Bobby Bard to half health and beta testers found it confusing and wasn't necessary to
+	/// distinguish his character type
+	/// </summary>
 	public static CombatCharacter MakeCharacter(CombatCharacterPresets characterType){
 		CombatCharacter newCharacter = null;
 		int characterMaxHealth = GetCharacterMaxhealth (characterType);
 		int characterMaxEnergy = GetCharacterMaxEnergy (characterType);
 		CombatAbility basicAttack = getCharacterBasicAttack (characterType);
-		switch (characterType){
-		case CombatCharacterPresets.BobbyBard:
-			newCharacter = new CombatCharacter (characterMaxHealth, characterMaxHealth / 2, characterMaxEnergy, characterMaxEnergy, basicAttack);
-			break;
-		default:
-			newCharacter = new CombatCharacter(characterMaxHealth, characterMaxHealth, characterMaxEnergy, characterMaxEnergy, basicAttack);
-			break;
-		}
+		newCharacter = new CombatCharacter(characterMaxHealth, characterMaxHealth, characterMaxEnergy, characterMaxEnergy, basicAttack);
 		List<CombatAbility> abilities = GetCharacterAbilities (characterType);
 		foreach (CombatAbility ability in abilities) {
 			newCharacter.AddAbility (ability);
@@ -65,7 +64,7 @@ public static class CombatCharacterFactory {
 	}
 
 	/// <summary>
-	/// [CHANGES] - For all non-enemy types, add bonusHealth to their base stat
+	/// [CHANGE] - For all non-enemy types, add bonusHealth to their base stat
 	/// </summary>
 	/// <returns>The character's maximum health</returns>
 	/// <param name="characterType">The character type</param>
