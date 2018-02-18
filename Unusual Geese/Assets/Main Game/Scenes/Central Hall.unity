@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6976a059de7d1541969c6681fba7c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSelectorVarName: 
+  startSelectorVarName: CGooseInteraction2
   dialogDataKeys:
   - start
   - combat
@@ -391,7 +391,7 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
     - ownActionType: 0
-      gameVarName: GooseBlocking2
+      gameVarName: CGooseBlocking2
       gameVarValue: false
       gameVarNumber: 0
       combatEnemies: 
@@ -815,7 +815,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6976a059de7d1541969c6681fba7c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSelectorVarName: 
+  startSelectorVarName: CGooseInteraction5
   dialogDataKeys:
   - start
   - combat
@@ -878,7 +878,7 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
     - ownActionType: 0
-      gameVarName: GooseBlocking5
+      gameVarName: CGooseBlocking5
       gameVarValue: false
       gameVarNumber: 0
       combatEnemies: 
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba05fd0888f34e4f8360c77ec524234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ownInteractionType: 0
+  ownInteractionType: 1
   enemies: 
   sceneName: 
   playerX: 0
@@ -1322,7 +1322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6976a059de7d1541969c6681fba7c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSelectorVarName: 
+  startSelectorVarName: CGooseInteraction4
   dialogDataKeys:
   - start
   - combat
@@ -1385,7 +1385,7 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
     - ownActionType: 0
-      gameVarName: GooseBlocking4
+      gameVarName: CGooseBlocking4
       gameVarValue: false
       gameVarNumber: 0
       combatEnemies: 
@@ -2413,7 +2413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6976a059de7d1541969c6681fba7c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startSelectorVarName: 
+  startSelectorVarName: CGooseInteraction3
   dialogDataKeys:
   - start
   - combat
@@ -2476,7 +2476,7 @@ MonoBehaviour:
       character: 0
       charAvailible: 0
     - ownActionType: 0
-      gameVarName: GooseBlocking3
+      gameVarName: CGooseBlocking3
       gameVarValue: false
       gameVarNumber: 0
       combatEnemies: 

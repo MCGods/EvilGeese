@@ -70,7 +70,7 @@ public class GameStateManager : MonoBehaviour{
 	void onSceneLoad(Scene scene, LoadSceneMode mode){
 		SoundManager.instance.playSFX ("transition");
 		Debug.Log (scene.name);
-		string[] nonPlayerMaps = new string[] {"WorldMap", "GKMenu", "Main", "Main 1", "Main 2", "EndGame", "MenuScene"};
+		string[] nonPlayerMaps = new string[] {"WorldMap", "GKMenu", "Main", "Main 1", "Main 2", "EndGame", "MenuScene", "Finish Game Screen"};
 		if (!Array.Exists(nonPlayerMaps, element => element.Equals(scene.name))) {
 			hasLoaded = false;
 			try{

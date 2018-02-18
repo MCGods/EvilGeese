@@ -1121,8 +1121,8 @@ MonoBehaviour:
       leftItemType: 0
     actions: []
   - speekerName: Bar Person
-    dialogText: I think I saw some figures at the windows of the Chemistry Department
-      earlier, might be worth trying there. Is that all?
+    dialogText: I think I saw some figures at the windows of the Library earlier,
+      might be worth trying there. Is that all?
     optionDescription:
     - Continue
     optionPointer:
