@@ -39,7 +39,24 @@ public class GoosyKongTests {
 	}
 
 	[UnityTest]
-	public IEnumerator BPortalAndMoneyTest() {
+	public IEnumerator BGooseJumpAndPlatformCollisions() {
+		yield return Setup();
+		movementScript.Jump ();
+		float maxHeight = 0;
+		for (int i = 0; i < 50; i++) {
+			if (player.transform.position.y > maxHeight) {
+				maxHeight = player.transform.position.y;
+			}
+			yield return new WaitForFixedUpdate ();
+		}
+		//check max height isn't through the platform above
+		Assert.Less (Math.Abs (player.transform.position.y + 5.9), 0.1);
+		//check goose rests back on platform
+		Assert.AreEqual(0, maxHeight);
+	}
+
+	[UnityTest]
+	public IEnumerator CPortalAndMoneyTest() {
 		yield return Setup ();
 		string originalScene = SceneManager.GetActiveScene ().name;
 		player.transform.position = new Vector3 (0.53f, 7.22f, 0f);
@@ -52,7 +69,7 @@ public class GoosyKongTests {
 	}
 
 	[UnityTest]
-	public IEnumerator CBarrelCollision() {
+	public IEnumerator DBarrelCollision() {
 		yield return Setup ();
 		player.transform.position = new Vector3 (-0.3f, 3.9f, 0);
 		yield return new WaitForSeconds (5);

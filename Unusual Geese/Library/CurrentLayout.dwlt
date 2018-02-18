@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 392}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -41,10 +41,10 @@ MonoBehaviour:
     y: 30
     width: 1366
     height: 635
-  m_MinSize: {x: 506, y: 342}
-  m_MaxSize: {x: 12006, y: 8042}
+  m_MinSize: {x: 508, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 1
-  controlID: 118
+  controlID: 110
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -65,10 +65,10 @@ MonoBehaviour:
     y: 0
     width: 1366
     height: 635
-  m_MinSize: {x: 506, y: 342}
-  m_MaxSize: {x: 12006, y: 8042}
+  m_MinSize: {x: 508, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 119
+  controlID: 111
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -113,8 +113,8 @@ MonoBehaviour:
     y: 0
     width: 268
     height: 364
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -138,14 +138,14 @@ MonoBehaviour:
     y: 364
     width: 1086
     height: 271
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 20}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 20}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,10 +230,10 @@ MonoBehaviour:
     y: 0
     width: 1086
     height: 635
-  m_MinSize: {x: 404, y: 342}
-  m_MaxSize: {x: 8004, y: 8042}
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 11
+  controlID: 112
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,10 +254,10 @@ MonoBehaviour:
     y: 0
     width: 1086
     height: 364
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 12
+  controlID: 113
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -319,7 +319,7 @@ MonoBehaviour:
       name: Curious Geese
       fullName: Curious Geese
       resultStatus: 1
-      duration: 15.349099
+      duration: 16.454056
       messages: 
       output: 
       stacktrace: 
@@ -331,7 +331,7 @@ MonoBehaviour:
       name: Assembly-CSharp.dll
       fullName: C:/Users/CyberGW/Documents/Unity/SEPRPhase3/EvilGeese/Unusual Geese/Library/ScriptAssemblies/Assembly-CSharp.dll
       resultStatus: 1
-      duration: 15.28036
+      duration: 16.37665
       messages: 
       output: 
       stacktrace: 
@@ -343,7 +343,7 @@ MonoBehaviour:
       name: CombatSystemTests
       fullName: CombatSystemTests
       resultStatus: 1
-      duration: 0.0580561
+      duration: 0.0544675
       messages: 
       output: 
       stacktrace: 
@@ -355,7 +355,7 @@ MonoBehaviour:
       name: CombatSystemCharacterDamage
       fullName: CombatSystemTests.CombatSystemCharacterDamage
       resultStatus: 1
-      duration: 0.030461
+      duration: 0.0334224
       messages: 
       output: "1\r\n"
       stacktrace: 
@@ -367,7 +367,7 @@ MonoBehaviour:
       name: DialogSystemTests
       fullName: DialogSystemTests
       resultStatus: 1
-      duration: 0.3314463
+      duration: 0.3318453
       messages: 
       output: 
       stacktrace: 
@@ -379,7 +379,7 @@ MonoBehaviour:
       name: DialogSystemConditionalConstantEvaluations
       fullName: DialogSystemTests.DialogSystemConditionalConstantEvaluations
       resultStatus: 1
-      duration: 0.0358171
+      duration: 0.0345267
       messages: 
       output: "I exist\r\nthe gamestate was null, creating new gamestate\r\n"
       stacktrace: 
@@ -391,7 +391,7 @@ MonoBehaviour:
       name: DialogSystemConditionalGamevarEvaluations
       fullName: DialogSystemTests.DialogSystemConditionalGamevarEvaluations
       resultStatus: 1
-      duration: 0.0334589
+      duration: 0.0331785
       messages: 
       output: "I exist\r\n"
       stacktrace: 
@@ -403,7 +403,7 @@ MonoBehaviour:
       name: DialogSystemConditionalItemEvaluations
       fullName: DialogSystemTests.DialogSystemConditionalItemEvaluations
       resultStatus: 1
-      duration: 0.0341618
+      duration: 0.0346877
       messages: 
       output: "I exist\r\n"
       stacktrace: 
@@ -415,7 +415,7 @@ MonoBehaviour:
       name: DialogSystemConditionalMoneyEvaluations
       fullName: DialogSystemTests.DialogSystemConditionalMoneyEvaluations
       resultStatus: 1
-      duration: 0.0340809
+      duration: 0.0340501
       messages: 
       output: "I exist\r\n1\r\n"
       stacktrace: 
@@ -427,7 +427,7 @@ MonoBehaviour:
       name: DialogSystemConditionalStaticEvaluations
       fullName: DialogSystemTests.DialogSystemConditionalStaticEvaluations
       resultStatus: 1
-      duration: 0.0331251
+      duration: 0.0332036
       messages: 
       output: "I exist\r\n"
       stacktrace: 
@@ -439,7 +439,7 @@ MonoBehaviour:
       name: GameStateTests
       fullName: GameStateTests
       resultStatus: 1
-      duration: 2.9490528
+      duration: 2.947631
       messages: 
       output: 
       stacktrace: 
@@ -451,7 +451,7 @@ MonoBehaviour:
       name: GameStateInitalizedEmpty
       fullName: GameStateTests.GameStateInitalizedEmpty
       resultStatus: 1
-      duration: 0.0376522
+      duration: 0.0370331
       messages: 
       output: "I exist\r\n"
       stacktrace: 
@@ -463,7 +463,7 @@ MonoBehaviour:
       name: GameStateRetainsGameVars
       fullName: GameStateTests.GameStateRetainsGameVars
       resultStatus: 1
-      duration: 0.0331994
+      duration: 0.0331547
       messages: 
       output: "I exist\r\n"
       stacktrace: 
@@ -475,7 +475,7 @@ MonoBehaviour:
       name: GameStateRetainsInventoryItems
       fullName: GameStateTests.GameStateRetainsInventoryItems
       resultStatus: 1
-      duration: 0.0330434
+      duration: 0.033259
       messages: 
       output: "I exist\r\n"
       stacktrace: 
@@ -487,7 +487,7 @@ MonoBehaviour:
       name: GameStateRetainsMoney
       fullName: GameStateTests.GameStateRetainsMoney
       resultStatus: 1
-      duration: 0.0347973
+      duration: 0.0352694
       messages: 
       output: "I exist\r\n2\r\n-1\r\n"
       stacktrace: 
@@ -499,7 +499,7 @@ MonoBehaviour:
       name: GameStateSavesCorrectly
       fullName: GameStateTests.GameStateSavesCorrectly
       resultStatus: 1
-      duration: 2.4721844
+      duration: 2.4423983
       messages: 
       output: "I exist\r\nComputerScience\r\nX: 0\r\nI exist\r\nthe gameVar \"StartDialog\"
         is undefined, using the \"start\" dialog\r\n1\r\nComputerScience\r\nX: 0\r\nComputerScience\r\nX:
@@ -514,7 +514,7 @@ MonoBehaviour:
       name: GoosyKongTests
       fullName: GoosyKongTests
       resultStatus: 1
-      duration: 11.73173
+      duration: 12.82352
       messages: 
       output: 
       stacktrace: 
@@ -526,7 +526,7 @@ MonoBehaviour:
       name: AGooseMovement
       fullName: GoosyKongTests.AGooseMovement
       resultStatus: 1
-      duration: 5.41325
+      duration: 5.4232397
       messages: 
       output: "Main\r\n"
       stacktrace: 
@@ -534,11 +534,23 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    - id: '[Assembly-CSharp][GoosyKongTests.BPortalAndMoneyTest]'
-      name: BPortalAndMoneyTest
-      fullName: GoosyKongTests.BPortalAndMoneyTest
+    - id: '[Assembly-CSharp][GoosyKongTests.BGooseJumpAndPlatformCollisions]'
+      name: BGooseJumpAndPlatformCollisions
+      fullName: GoosyKongTests.BGooseJumpAndPlatformCollisions
       resultStatus: 1
-      duration: 0.9475138
+      duration: 1.0286752
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GoosyKongTests.CPortalAndMoneyTest]'
+      name: CPortalAndMoneyTest
+      fullName: GoosyKongTests.CPortalAndMoneyTest
+      resultStatus: 1
+      duration: 0.9614709
       messages: 
       output: "Main 1\r\n"
       stacktrace: 
@@ -546,11 +558,11 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    - id: '[Assembly-CSharp][GoosyKongTests.CBarrelCollision]'
-      name: CBarrelCollision
-      fullName: GoosyKongTests.CBarrelCollision
+    - id: '[Assembly-CSharp][GoosyKongTests.DBarrelCollision]'
+      name: DBarrelCollision
+      fullName: GoosyKongTests.DBarrelCollision
       resultStatus: 1
-      duration: 5.271392
+      duration: 5.2790365
       messages: 
       output: "Here\r\nHere\r\nHere\r\nEndGame\r\nEndGame\r\nEndGame\r\n"
       stacktrace: 
@@ -562,7 +574,7 @@ MonoBehaviour:
       name: GridSystemTests
       fullName: GridSystemTests
       resultStatus: 1
-      duration: 0.0498899
+      duration: 0.0498205
       messages: 
       output: 
       stacktrace: 
@@ -574,7 +586,7 @@ MonoBehaviour:
       name: GridSystemCollisions
       fullName: GridSystemTests.GridSystemCollisions
       resultStatus: 1
-      duration: 0.0181684
+      duration: 0.0181881
       messages: 
       output: 
       stacktrace: 
@@ -582,12 +594,12 @@ MonoBehaviour:
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
-    m_ResultText: "CBarrelCollision (5.271s)\n---\nHere\r\nHere\r\nHere\r\nEndGame\r\nEndGame\r\nEndGame"
+    m_ResultText: Curious Geese (16.454s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8e6306d3
-      m_LastClickedID: -754556018
+      m_SelectedIDs: 0584025a
+      m_LastClickedID: 1510114309
       m_ExpandedIDs: f0a18d916b874daeb6da56ae1c3bc0e1ad070ef21e2817353ad12e590584025abd0a7b5fffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -725,20 +737,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Goosy Kong/Assets4DK/Scenes
+    - Assets/Main Game/Unit tests
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Goosy Kong/Assets4DK/Scenes
+  - Assets/Main Game/Unit tests
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\CyberGW\Documents\Unity\SEPRPhase3\EvilGeese\Unusual
     Geese
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4c2a0000
-    m_LastClickedID: 10828
-    m_ExpandedIDs: 00000000ee27000062280000d42800003a2900005e290000ba290000c0290000382b0000aa2c0000ac2c000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 360.30554}
+    m_SelectedIDs: e2280000
+    m_LastClickedID: 10466
+    m_ExpandedIDs: 00000000f227000066280000d82800004029000064290000c2290000c8290000402b00005a2c00005c2c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -766,7 +778,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ee27000062280000d42800003a2900005e290000ba290000c0290000382b0000aa2c0000ac2c0000
+    m_ExpandedIDs: 00000000f227000066280000d82800004029000064290000c2290000c8290000402b00005a2c00005c2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -791,8 +803,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: fe450000
-    m_LastClickedInstanceID: 17918
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300007e280000442a00005a2f0000542a0000802b0000002a0000
     m_RenameOverlay:
@@ -886,7 +898,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0a7efeff987efeff0088feff268ffeffae8ffeff9c94feff8697feff1498feffe09dfeffe2a0feff60a1feffd8a5feff82a8feff10a9feffc2aefeff7ab4feffbeb4feff84b9feff8cbcfeff1abdfeffa8c2fefffec3feff82c4feff12c9feffa0cefeff30cffefffcd7fefff2dafeff86dbfeff60e3feff6ce4fefff0e4feff90e9feffccecfeff52edfeffeef1feff1ef5feff7ef5feffd4f9feffe2fbfeff6afcfeffda00ffffde04ffff2605ffffca09ffff5618ffffdc18ffff3a1dffff0421ffff8e21ffff1425ffff6c28ffffee28ffff962cffffd632ffff5e33ffff7437ffffa03bffff283cffff2640ffff2a44ffffb244ffff8a48ffff5650ffffde50ffffe854ffff685afffff05affffbc5effff2663ffffac63ffffd667ffff9a7dffff9281ffff3882ffffee86ffff048affffaa8affff548fffff8a90ffff1491ffffbe95ffff469affffee9affffea9fffff70a2ffffd2a2ffff88a7ffffbcaaffff64abffff1ab0ffff62b3ffff08b4ffffccb8ffff1ebdffffc6bdffff86c2ffff34c5ffffdcc5ffff6acaffffc8ceffff70cfffff32d4ffff00dbffff62dbffff86e1ffff9efbffff00000000
+    m_ExpandedIDs: 16ebffff84ebffff1ef6ffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -905,7 +917,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
   m_ExpandedScenes:
-  - Main
+  - Biology
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
