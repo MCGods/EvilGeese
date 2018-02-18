@@ -21,11 +21,6 @@ public class Portal : MonoBehaviour {
 
 	}
 
-	public void StartGame(){
-		SceneManager.LoadScene("Main");
-		PlayerPrefs.SetInt ("Reward", 0);
-
-	}
 	public void LeaveGame(string leaveGame){
 		SceneManager.LoadScene (leaveGame);
 

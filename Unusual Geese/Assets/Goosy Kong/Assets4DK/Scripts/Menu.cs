@@ -35,10 +35,6 @@ public class Menu : MonoBehaviour {
 	public void LeaveLevel(){
 		SceneManager.LoadScene ("EndGame");
 	}
-	public void ExitGame()
-	{
-		
-	}
 
 	// Update is called once per frame
 	void Update () {

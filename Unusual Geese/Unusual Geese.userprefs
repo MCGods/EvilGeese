@@ -1,24 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Main Game\Menu\Scripts\ButtonManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Goosy Kong\Assets4DK\Scripts\bar.cs">
     <Files>
-      <File FileName="Assets\Main Game\Menu\Scripts\DemoTimer.cs" Line="7" Column="16" />
-      <File FileName="Assets\Main Game\CombatStuff\CombatCharacterFactory.cs" Line="9" Column="79" />
-      <File FileName="Assets\Main Game\CombatStuff\CombatCharacter.cs" Line="12" Column="89" />
-      <File FileName="Assets\Main Game\CombatStuff\CombatManager.cs" Line="8" Column="5" />
-      <File FileName="Assets\Main Game\EndGameScript.cs" Line="7" Column="5" />
-      <File FileName="Assets\Main Game\BlockGridGameVar.cs" Line="8" Column="5" />
-      <File FileName="Assets\Main Game\Dialog stuff\DialogAction.cs" Line="8" Column="112" />
-      <File FileName="Assets\Main Game\Dialog stuff\DialogManager.cs" Line="8" Column="5" />
-      <File FileName="Assets\Main Game\PauseMenuManager.cs" Line="8" Column="5" />
-      <File FileName="Assets\Main Game\GameState.cs" Line="7" Column="5" />
-      <File FileName="Assets\Main Game\SoundManager.cs" Line="6" Column="5" />
-      <File FileName="Assets\Main Game\GameStateManager.cs" Line="12" Column="5" />
-      <File FileName="Assets\Main Game\Dialog stuff\DialogConditional.cs" Line="9" Column="5" />
-      <File FileName="Assets\Main Game\InventoryItems.cs" Line="7" Column="69" />
-      <File FileName="Assets\Main Game\CharacterMenu.cs" Line="7" Column="5" />
-      <File FileName="Assets\Main Game\Dialog stuff\DialogEditor.cs" Line="10" Column="5" />
-      <File FileName="Assets\Main Game\Menu\Scripts\ButtonManager.cs" Line="7" Column="5" />
+      <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\Menu.cs" Line="37" Column="3" />
+      <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\bar.cs" Line="1" Column="1" />
+      <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\Collision.cs" Line="1" Column="1" />
+      <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\DestoryClone.cs" Line="1" Column="1" />
+      <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\EndGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\Portal.cs" Line="23" Column="1" />
+      <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\RestartUponDeath.cs" Line="1" Column="1" />
+      <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\Start.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

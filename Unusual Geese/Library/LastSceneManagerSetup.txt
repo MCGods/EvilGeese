@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Main Game/Scenes/Physics.unity
+- path: Assets/Goosy Kong/Assets4DK/Scenes/Main.unity
   isLoaded: 1
   isActive: 1
