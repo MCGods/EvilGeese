@@ -6,12 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class RestartUponDeath : MonoBehaviour {
 	public GameObject goose;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+
+	// checks to see if player has fallen off the map, if so then end game
 	void Update () {
 		if (goose.transform.position.y < -7.8) {
 			SceneManager.LoadScene ("EndGame");

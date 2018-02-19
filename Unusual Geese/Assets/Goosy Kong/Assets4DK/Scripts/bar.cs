@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class bar : MonoBehaviour {
 
-	public GameObject barrel;
-	Vector3 whereToSpawn;
+	public GameObject barrel; //object to instantiate
+	public Vector3 whereToSpawn; // location
 	public float spawnRate;
-	float nextSpawn=1f;
+	float nextSpawn;
 
 
 

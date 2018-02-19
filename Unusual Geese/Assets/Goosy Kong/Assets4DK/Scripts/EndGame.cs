@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class EndGame : MonoBehaviour {
 	private int x;
 	public Text moneyText;
-
+	//move player from final level to end game scene upon colliding with flag
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.name == "Goose") {
@@ -27,13 +27,10 @@ public class EndGame : MonoBehaviour {
 
 	}
 
-	// Use this for initialization
+	//displays money on screen upon loading into scene
 	void Start () {
 		DisplayMoney ();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

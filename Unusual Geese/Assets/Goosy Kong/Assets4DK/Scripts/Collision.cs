@@ -6,7 +6,7 @@ using System;
 
 public class Collision : MonoBehaviour {
 	public String name1;
-
+	//move player to final scene upon collision with goose(player)
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.name == name1)
@@ -16,12 +16,5 @@ public class Collision : MonoBehaviour {
 		}
 	}
 
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

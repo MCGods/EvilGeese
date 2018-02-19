@@ -14,8 +14,7 @@ public class Portal : MonoBehaviour {
 
 	public Text money;
 
-
-	// Use this for initialization
+	//display money on screen when loading scene
 	void Start () {
 		DisplayMoney ();
 
@@ -25,6 +24,7 @@ public class Portal : MonoBehaviour {
 		SceneManager.LoadScene (leaveGame);
 
 	}
+	//give player money when leaving game
 	public void LeaveToMain(){
 		GameStateManager state = GameObject.Find ("GameStateManager").GetComponent<GameStateManager> ();
 		state.giveMoney (PlayerPrefs.GetInt ("Reward"));
@@ -32,7 +32,8 @@ public class Portal : MonoBehaviour {
 	}
 
 
-
+	// checks which level player is on and determines which level to leave to
+	// give player correct amount of money for each level
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "Goose") {
 			

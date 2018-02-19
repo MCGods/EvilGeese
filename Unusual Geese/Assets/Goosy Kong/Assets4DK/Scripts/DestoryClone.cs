@@ -6,12 +6,7 @@ using UnityEngine;
 public class DestoryClone : MonoBehaviour {
 	public GameObject barrel;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
+	//check if barrel falls off screen and destroy if it has
 	void Update () {
 		if (barrel.transform.position.y < -7.7) {
 			Debug.Log ("hello");
