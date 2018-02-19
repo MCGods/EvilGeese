@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &31094116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2215,8 +2215,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5474727, y: 0.8587305}
   m_AnchorMax: {x: 0.81000006, y: 0.9131913}
-  m_AnchoredPosition: {x: 0.12677002, y: -0.34024048}
-  m_SizeDelta: {x: -2, y: -2}
+  m_AnchoredPosition: {x: 2.393402, y: -3.5200043}
+  m_SizeDelta: {x: 2.5332, y: 4.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1034273476
 MonoBehaviour:
@@ -2618,6 +2618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barrel: {fileID: 0}
+  whereToSpawn: {x: 0, y: 0, z: 0}
   spawnRate: 5
 --- !u!4 &1327304752
 Transform:
@@ -2779,8 +2780,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5474727, y: 0.7978653}
   m_AnchorMax: {x: 0.81000006, y: 0.8587305}
-  m_AnchoredPosition: {x: -0.7999878, y: -0.1000061}
-  m_SizeDelta: {x: -2, y: -1}
+  m_AnchoredPosition: {x: 1.9300003, y: -2.3700104}
+  m_SizeDelta: {x: 3.46, y: 3.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1547811586
 GameObject:
@@ -2836,6 +2837,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1548680112 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1472230081139668, guid: d835ed9f6357cd14fabc8b32789221b6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1551959715}
+--- !u!114 &1548680114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1548680112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eada4ccde1ea546b1a175e715b3b9325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyText: {fileID: 1488268053}
 --- !u!1001 &1551959715
 Prefab:
   m_ObjectHideFlags: 0
@@ -2885,7 +2903,8 @@ Prefab:
       propertyPath: money
       value: 
       objectReference: {fileID: 1488268053}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114634657149522756, guid: d835ed9f6357cd14fabc8b32789221b6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: d835ed9f6357cd14fabc8b32789221b6, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1618480110
@@ -3648,6 +3667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barrel: {fileID: 0}
+  whereToSpawn: {x: 0, y: 0, z: 0}
   spawnRate: 2
 --- !u!4 &2022073473
 Transform:
