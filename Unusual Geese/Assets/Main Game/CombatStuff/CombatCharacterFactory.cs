@@ -17,7 +17,8 @@ public static class CombatCharacterFactory {
 		WalterWizard,
 		PamelaPaladin,
 		Goose,
-        ViceChancellor
+        ViceChancellor,
+		Gorilla
 	}   
 
 	public static int bonusHealth = 0;
@@ -26,6 +27,7 @@ public static class CombatCharacterFactory {
 	/// <summary>
 	/// [CHANGE] - Remove feature setting Bobby Bard to half health and beta testers found it confusing and wasn't necessary to
 	/// distinguish his character type
+	/// [EXTENSION ASSESSMENT 4] - added clause to set gorrilla characters attack friendlies chance
 	/// </summary>
 	public static CombatCharacter MakeCharacter(CombatCharacterPresets characterType){
 		CombatCharacter newCharacter = null;
@@ -37,10 +39,16 @@ public static class CombatCharacterFactory {
 		foreach (CombatAbility ability in abilities) {
 			newCharacter.AddAbility (ability);
 		}
+		if (characterType == CombatCharacterPresets.Gorilla) {
+			newCharacter.attackFriendlyChance = 0.5f;
+		}
 		newCharacter.combatSprites = getCharacterSprites (characterType);
 		return newCharacter;
 	}
 
+	/// <summary>
+	/// [EXTENSION ASSESSMENT 4] - added Gorilla
+	/// </summary>
 	public static string GetCharacterName(CombatCharacterPresets characterType){
 		switch (characterType) {
 		case CombatCharacterPresets.BobbyBard:
@@ -59,6 +67,8 @@ public static class CombatCharacterFactory {
 			return "Goose";
         case CombatCharacterPresets.ViceChancellor:
             return "Vice Chancellor";
+		case CombatCharacterPresets.Gorilla:
+			return "Garrett The Gorilla";
 		}
 		return "Character name not defined";
 	}
@@ -86,6 +96,8 @@ public static class CombatCharacterFactory {
 			return 50;
         case CombatCharacterPresets.ViceChancellor:
             return 1000;
+		case CombatCharacterPresets.Gorilla:
+			return 250;
 		}
 		return 1;
 	}
@@ -104,6 +116,8 @@ public static class CombatCharacterFactory {
 			return 150;
 		case CombatCharacterPresets.SusanShapeShifter:
 			return 120;
+		case CombatCharacterPresets.Gorilla:
+			return 150;
 		}
 		return 1;
 	}

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 /// <summary>
 /// [EXTENSIONS] - Added giveMoney, increaseCharacterHealth, increaseCharacterAttack, startMiniGame and endGame as an action type
+/// [EXTENSION ASSESSMENT 4] - Added progressQuest as an action type
 /// </summary>
 public class DialogAction {
 	public enum actionType{
@@ -17,6 +18,7 @@ public class DialogAction {
 		increaseCharacterHealth,
 		increaseCharacterAttack,
 		startMiniGame,
+		progressQuest,
 		endGame
 	}
 	public actionType ownActionType;
@@ -79,6 +81,9 @@ public class DialogAction {
 			Debug.Log ("Minigame");
 			SoundManager.instance.playBGM ("minigame");
 			SceneManager.LoadScene ("Goosy Kong/Assets4DK/Scenes/GKMenu");
+			break;
+		case actionType.progressQuest:
+			state.tryQuestProgression ();
 			break;
 		case actionType.endGame:
 			SoundManager.instance.playBGM ("victory");

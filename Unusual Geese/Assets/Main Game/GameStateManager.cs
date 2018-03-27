@@ -104,6 +104,29 @@ public class GameStateManager : MonoBehaviour{
 	}
 
 	/// <summary>
+	/// [EXTENSION ASSESMENT 4] - Tries to progress the quest.
+	/// </summary>
+	public void tryQuestProgression(){
+		if (state.questState == 0) {
+			if (QuestData.stage1Complete (state.s1Quest)) {
+				state.questState++;
+			}
+		}
+
+		if (state.questState == 1) {
+			if (QuestData.stage2Complete (state.s2Quest)) {
+				state.questState++;
+			}
+		}
+
+		if (state.questState == 2) {
+			if (QuestData.stage3Complete (state.s3Quest)) {
+				state.questState++;
+			}
+		}
+	}
+
+	/// <summary>
 	/// [EXTENSION] Give or take money from the current amount (take specified by a negative value)
 	/// </summary>
 	/// <param name="money">The money to give or take (-ve to take)</param>

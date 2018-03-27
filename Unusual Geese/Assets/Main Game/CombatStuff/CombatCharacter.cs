@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
+/// <summary>
+/// Combat character.
+/// [EXTENSION ASSESSMENT 4] - added attackFriendlyChance to support the gorrilla character class
+/// </summary>
 public class CombatCharacter {
 	public int maxHealth;
 	public int health;
@@ -11,6 +15,7 @@ public class CombatCharacter {
 	public List<CombatAbility> abilities;
 	public CombatEntity entity;// the CombatEntity attached to the representation of this character
 	public List<CombatEffect> effectList;
+	public float attackFriendlyChance = 0f;
 
 	public Dictionary<string, List<Sprite>> combatSprites;
 

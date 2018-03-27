@@ -5,6 +5,7 @@ using UnityEngine;
 //stores the majority of data relating to the current game state
 /// <summary>
 /// [EXTENSIONS] - Added money variable
+/// [EXTENSION ASSESMENT 4] - added Quest variables
 /// </summary>
 public class GameState : ISerializationCallbackReceiver{
 	public List<CombatCharacterFactory.CombatCharacterPresets> availibleCharacters;
@@ -35,6 +36,12 @@ public class GameState : ISerializationCallbackReceiver{
 	/// [EXTENSION] - The current amount of money the user has
 	/// </summary>
 	public int money;
+
+	/// [EXTENSION ASSESMENT 4] - Quest variables
+	public int questState = 0;
+	public QuestData.Stage1QuestTypes s1Quest;
+	public QuestData.Stage2QuestTypes s2Quest;
+	public QuestData.Stage3QuestTypes s3Quest;
 
 	public GameState(){
 		gameStateVars = new Dictionary<string, string> ();

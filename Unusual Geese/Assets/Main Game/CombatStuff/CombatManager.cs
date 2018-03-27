@@ -121,7 +121,7 @@ public class CombatManager : MonoBehaviour {
 			c.updateEntityAnimation ("base");
 			pos += offset;
 		}
-		attacker = frendlyChars [attackerPos];
+		setAttacker(frendlyChars [attackerPos]);
 	}
 	
 	// Update is called once per frame
@@ -141,7 +141,7 @@ public class CombatManager : MonoBehaviour {
 			Debug.Log ("invalid attackerPos");
 			return;
 		}else{
-			attacker = attackChars [attackerPos];
+			setAttacker(attackChars [attackerPos]);
 		}
 		switch (currentStage) {
 		case turnStages.selecting:
@@ -422,7 +422,7 @@ public class CombatManager : MonoBehaviour {
 	}
 
 	//called in update() if the current stage is the attacking stage
-	void attackingStage(){// TODO add animations and delays to attack stage
+	void attackingStage(){
 		if (timer > 1f) {
 			attack.doAbility (attackTargets, attacker);
 			attackTargets = null;
@@ -447,7 +447,7 @@ public class CombatManager : MonoBehaviour {
 				if (attackerPos >= attackChars.Count){
 					break;
 				}
-				attacker = attackChars[attackerPos];
+				setAttacker(attackChars[attackerPos]);
 			} while (!attacker.isAlive());
 
 			if (attackerPos >= attackChars.Count) {
@@ -490,5 +490,35 @@ public class CombatManager : MonoBehaviour {
 			frendlyCharList.Add (CombatCharacterFactory.MakeCharacter (charType));
 		}
 		combatMan.frendlyChars = frendlyCharList;
+	}
+
+	/// [NEW FOR ASSESSMENT 4]
+	/// <summary>
+	/// Sets the attacker.
+	///	also handles actions that need to happen when the attacker changes
+	/// </summary>
+	void setAttacker(CombatCharacter character){
+		if (attacker == character) {
+			return;
+		}
+		attacker = character;
+		float val = Random.value;
+		Debug.Log (val);
+		if (val < attacker.attackFriendlyChance) {
+			//select a random alive friendly character
+			List<int> options = new List<int> ();
+			for (int i = 0; i < frendlyChars.Count; i++) {
+				if (frendlyChars [i].health > 0) {
+					options.Add (i);
+				}
+			}
+			int toAttack = options [Random.Range (0, options.Count - 1)];
+			//attack them
+			attackTargets = new List<CombatCharacter> ();
+			attackTargets.Add (frendlyChars [toAttack]);
+			attack = attacker.basicAttack;
+			attacker.updateEntityAnimation ("move");
+			currentStage = turnStages.moving;
+		}
 	}
 }
