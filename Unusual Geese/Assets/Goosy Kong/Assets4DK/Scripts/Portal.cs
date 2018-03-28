@@ -28,6 +28,8 @@ public class Portal : MonoBehaviour {
 	public void LeaveToMain(){
 		GameStateManager state = GameObject.Find ("GameStateManager").GetComponent<GameStateManager> ();
 		state.giveMoney (PlayerPrefs.GetInt ("Reward"));
+		state.setGameVar ("GoosyKongHighScore", PlayerPrefs.GetInt ("Reward").ToString ());
+		state.tryQuestProgression ();
 		SceneManager.LoadScene ("GKMenu");
 	}
 

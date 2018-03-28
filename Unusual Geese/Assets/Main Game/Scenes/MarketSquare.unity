@@ -506,6 +506,15 @@ MonoBehaviour:
       itemAmount: 0
       character: 0
       charAvailible: 0
+    - ownActionType: 8
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
   - speekerName: The Doors
     dialogText: Sure thing bud. Don't get your knickers in a twist.
     optionDescription:
@@ -1576,6 +1585,11 @@ Prefab:
         type: 2}
       propertyPath: state.currentTeam.Array.data[0]
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114729010611386790, guid: d407bc6b3aaa52146ac4de7d6f7232fb,
+        type: 2}
+      propertyPath: state.s1Quest
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d407bc6b3aaa52146ac4de7d6f7232fb, type: 2}
