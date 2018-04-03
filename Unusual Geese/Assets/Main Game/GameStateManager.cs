@@ -70,7 +70,7 @@ public class GameStateManager : MonoBehaviour{
 	void onSceneLoad(Scene scene, LoadSceneMode mode){
 		SoundManager.instance.playSFX ("transition");
 		Debug.Log (scene.name);
-		string[] nonPlayerMaps = new string[] {"WorldMap", "GKMenu", "Main", "Main 1", "Main 2", "EndGame", "MenuScene", "Finish Game Screen"};
+		string[] nonPlayerMaps = new string[] {"WorldMap", "GKMenu", "Main", "Main 1", "Main 2", "EndGame", "MenuScene", "Finish Game Screen", "QuestSlots"};
 		if (!Array.Exists(nonPlayerMaps, element => element.Equals(scene.name))) {
 			hasLoaded = false;
 			try{
@@ -124,6 +124,24 @@ public class GameStateManager : MonoBehaviour{
 				state.questState++;
 			}
 		}
+	}
+		
+	/// <summary>
+	/// [EXTENSION ASSEMENT 4] - Gets the current quest text.
+	/// </summary>
+	/// <returns>The current quest text.</returns>
+	public string getCurrentQuestText(){
+		switch (state.questState) {
+		case 0:
+			return QuestData.stage1Text (state.s1Quest);
+		case 1:
+			return QuestData.stage2Text (state.s2Quest);
+		case 2:
+			return QuestData.stage3Text (state.s3Quest);
+		case 3:
+			return "Quests Completed!";
+		}
+		return "error";
 	}
 
 	/// <summary>

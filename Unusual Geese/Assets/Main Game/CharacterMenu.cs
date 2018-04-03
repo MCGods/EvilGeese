@@ -14,6 +14,7 @@ public class CharacterMenu : MonoBehaviour {
 	GameObject healthText;
 	GameObject energyText;
 	GameObject positionText;
+	GameObject questText;
 
 	CombatCharacterFactory.CombatCharacterPresets currentCharacter;
 	GameStateManager state;
@@ -33,6 +34,7 @@ public class CharacterMenu : MonoBehaviour {
 		healthText = this.transform.Find ("HealthText").gameObject;
 		energyText = this.transform.Find ("EnergyText").gameObject;
 		positionText = this.transform.Find ("PosText").gameObject;
+		questText = this.transform.Find ("QuestText").gameObject;
 
 		buttonObjects = new List<GameObject> ();
 		selectCharacter(state.availibleCharacters[0]);
@@ -51,6 +53,8 @@ public class CharacterMenu : MonoBehaviour {
 				});
 			buttonOffset += 0.08f;
 		}
+
+		questText.GetComponent<Text> ().text = "Current Quest: \n" + state.getCurrentQuestText ();
 		
 	}
 	

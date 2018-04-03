@@ -79,4 +79,37 @@ public static class QuestData {
 		return false;
 	}
 
+	public static string stage1Text(Stage1QuestTypes quest){
+		switch (quest) {
+		case Stage1QuestTypes.FightDoors:
+			return "Fight the Nisa Doors";
+		case Stage1QuestTypes.GoosyKongScore1:
+			return "Score at least 1 on the Goosy Kong machine at the Glasshouse";
+		default:
+			return "error";
+		}
+
+	}
+
+	public static string stage2Text(Stage2QuestTypes quest){
+		switch (quest) {
+		case Stage2QuestTypes.BuyGrenade:
+			return "Buy a Grenade";
+		case Stage2QuestTypes.GoosyKongScore2:
+			return "Score at least 2 on the Goosy Kong machine at the Glasshouse";
+		default:
+			return "error";
+		}
+
+	}
+
+	public static string stage3Text(Stage3QuestTypes quest){
+		switch (quest) {
+		case Stage3QuestTypes.GoosyKongScore3:
+			return "Score at least 3 on the Goosy Kong machine at the Glasshouse";
+		default:
+			return "error";
+		}
+
+	}
 }

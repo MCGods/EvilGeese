@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SlotsManager : MonoBehaviour {
 	GameObject slotPanel;
@@ -18,8 +20,24 @@ public class SlotsManager : MonoBehaviour {
 	public float distanceToStop;
 	bool canStop = false;
 
+	QuestData.Stage1QuestTypes[] quest1types;
+	QuestData.Stage2QuestTypes[] quest2types;
+	QuestData.Stage3QuestTypes[] quest3types;
+
+	float afterStopDelay = 5f; // how long to wait after the wheels have stopped before switching scenes
+
+
 	// Use this for initialization
 	void Start () {
+		quest1types = (QuestData.Stage1QuestTypes[])Enum.GetValues (typeof(QuestData.Stage1QuestTypes));
+		quest2types = (QuestData.Stage2QuestTypes[])Enum.GetValues (typeof(QuestData.Stage2QuestTypes));
+		quest3types = (QuestData.Stage3QuestTypes[])Enum.GetValues (typeof(QuestData.Stage3QuestTypes));
+
+		int[] questTypeLength = new int[3];
+		questTypeLength [0] = quest1types.Length;
+		questTypeLength [1] = quest2types.Length;
+		questTypeLength [2] = quest3types.Length;
+
 		slotPanel = this.transform.Find ("SlotPanel").gameObject;
 		spinSpeeds = new float[3];
 		slotObjects = new List<GameObject>[3];
@@ -27,16 +45,31 @@ public class SlotsManager : MonoBehaviour {
 		for (int m = 0; m <= 2; m++) {
 			spinSpeeds [m] = startSpeeds [m];
 			slotObjects [m] = new List<GameObject> ();
-			for (int i = 0; i < 20+m; i++) {
+			for (int i = 0; i < questTypeLength[m] * 4; i++) {
 				GameObject g = Instantiate (slotPanel, this.transform);
 				slotObjects [m].Add (g);
 				g.SetActive (true);
 				g.transform.position += new Vector3 (offsetX, 0f) * (m - 1);
-				g.transform.Find ("Text").gameObject.GetComponent<UnityEngine.UI.Text> ().text = i.ToString ();
+				switch (m) {
+				case 0:
+					g.transform.Find ("Text").gameObject.GetComponent<UnityEngine.UI.Text> ().text = QuestData.stage1Text (quest1types [i % quest1types.Length]);
+					break;
+				case 1:
+					g.transform.Find ("Text").gameObject.GetComponent<UnityEngine.UI.Text> ().text = QuestData.stage2Text (quest2types [i % quest2types.Length]); 
+					break;
+				case 2:
+					g.transform.Find ("Text").gameObject.GetComponent<UnityEngine.UI.Text> ().text = QuestData.stage3Text (quest3types [i % quest3types.Length]);
+					break;
+
+				}
 			}
-			stopAt [m] = Random.Range (0, slotObjects [m].Count - 1);
+			stopAt [m] = UnityEngine.Random.Range (0, slotObjects [m].Count - 1);
 			setSlotsScale (slotObjects [m], currentPos [m]);
 		}
+		GameStateManager state = GameStateManager.getGameStateManager ();
+		state.state.s1Quest = quest1types [stopAt [0] % quest1types.Length];
+		state.state.s2Quest = quest2types [stopAt [1] % quest2types.Length];
+		state.state.s3Quest = quest3types [stopAt [2] % quest3types.Length];
 	}
 	
 	// Update is called once per frame
@@ -65,6 +98,14 @@ public class SlotsManager : MonoBehaviour {
 					}
 				}
 			}
+		}
+
+		if (stopping == 3) {
+			afterStopDelay -= Time.deltaTime;
+			if (afterStopDelay < 0) {
+				SceneManager.LoadScene ("Main Game/Scenes/ComputerScience");
+			}
+			
 		}
 	}
 
