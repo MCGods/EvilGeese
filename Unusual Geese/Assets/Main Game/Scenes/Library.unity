@@ -935,7 +935,25 @@ MonoBehaviour:
       leftSide: 
       rightItemType: 0
       leftItemType: 0
-    actions: []
+    actions:
+    - ownActionType: 0
+      gameVarName: HasSpokenToUnconsciousPerson
+      gameVarValue: True
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+    - ownActionType: 8
+      gameVarName: 
+      gameVarValue: 
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
   - speekerName: The Narrator
     dialogText: She appears to be unconscious. Maybe you need to find something to
       wake her up.
@@ -1292,8 +1310,10 @@ MonoBehaviour:
     optionDescription:
     - Use beak
     - Continue
+    - 
     optionPointer:
     - dialog2
+    - 
     - 
     optionConditional:
     - rightSideComparable: 2
@@ -1310,10 +1330,35 @@ MonoBehaviour:
       leftSide: 
       rightItemType: 0
       leftItemType: 0
+    - rightSideComparable: 2
+      leftSideComparable: 2
+      ownComparison: 0
+      rightSide: 
+      leftSide: 
+      rightItemType: 0
+      leftItemType: 0
     actions:
     - ownActionType: 0
       gameVarName: BiologyUnlocked
       gameVarValue: true
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+    - ownActionType: 0
+      gameVarName: HasSpokenToUnconsciousPerson
+      gameVarValue: True
+      gameVarNumber: 0
+      combatEnemies: 
+      itemType: 0
+      itemAmount: 0
+      character: 0
+      charAvailible: 0
+    - ownActionType: 8
+      gameVarName: 
+      gameVarValue: 
       gameVarNumber: 0
       combatEnemies: 
       itemType: 0

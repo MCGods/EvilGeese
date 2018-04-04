@@ -11,14 +11,17 @@ public static class QuestData {
 	public enum Stage1QuestTypes{
 		GoosyKongScore1,
 		FightDoors,
-		
+		TalkBarkeep,
 	}
 	public enum Stage2QuestTypes{
 		GoosyKongScore2,
-		BuyGrenade
+		BuyGrenade,
+		GetWalter
 	}
 	public enum Stage3QuestTypes{
-		GoosyKongScore3
+		GoosyKongScore3,
+		LookThroughMicroscope,
+		TalkToSomebodyUnconscious
 	}
 
 	public static bool stage1Complete(Stage1QuestTypes quest){
@@ -32,6 +35,11 @@ public static class QuestData {
 			break;
 		case Stage1QuestTypes.FightDoors:
 			if (state.getGameVar ("Closed") == "false") {
+				return true;
+			}
+			break;
+		case Stage1QuestTypes.TalkBarkeep:
+			if (state.getGameVar ("GlassHouseDialog") == "None") {
 				return true;
 			}
 			break;
@@ -56,6 +64,11 @@ public static class QuestData {
 				return true;
 			}
 			break;
+		case Stage2QuestTypes.GetWalter:
+			if (state.getGameVar ("WalterDialogVar") == "None") {
+				return true;
+			}
+			break;
 		default:
 			return false;
 		}
@@ -72,6 +85,16 @@ public static class QuestData {
 				return true;
 			}
 			break;
+		case Stage3QuestTypes.LookThroughMicroscope:
+			if (state.getGameVar ("MicroScopeDialog") == "None") {
+				return true;
+			}
+			break;
+		case Stage3QuestTypes.TalkToSomebodyUnconscious:
+			if (state.getGameVar ("HasSpokenToUnconsciousPerson") == "True") {
+				return true;
+			}
+			break;
 		default:
 			return false;
 		}
@@ -85,6 +108,8 @@ public static class QuestData {
 			return "Fight the Nisa Doors";
 		case Stage1QuestTypes.GoosyKongScore1:
 			return "Score at least 1 on the Goosy Kong machine at the Glasshouse";
+		case Stage1QuestTypes.TalkBarkeep:
+			return "Talk to the Barkeep at the Glasshouse";
 		default:
 			return "error";
 		}
@@ -97,6 +122,8 @@ public static class QuestData {
 			return "Buy a Grenade";
 		case Stage2QuestTypes.GoosyKongScore2:
 			return "Score at least 2 on the Goosy Kong machine at the Glasshouse";
+		case Stage2QuestTypes.GetWalter:
+			return "Get Walter the Wizard to join you on your quest";
 		default:
 			return "error";
 		}
@@ -107,6 +134,10 @@ public static class QuestData {
 		switch (quest) {
 		case Stage3QuestTypes.GoosyKongScore3:
 			return "Score at least 3 on the Goosy Kong machine at the Glasshouse";
+		case Stage3QuestTypes.LookThroughMicroscope:
+			return "Look through a microscope";
+		case Stage3QuestTypes.TalkToSomebodyUnconscious:
+			return "Speak to an unconscious person";
 		default:
 			return "error";
 		}
