@@ -13,17 +13,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 3}
-  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 950
-    height: 626
-  m_MinSize: {x: 681, y: 492}
+    width: 1536
+    height: 731
+  m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
-  vertical: 0
-  controlID: 10
+  vertical: 1
+  controlID: 3626
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,12 +45,12 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 203
-    y: 100
-    width: 469
-    height: 331
+    x: 322
+    y: 92
+    width: 897
+    height: 439
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_MaximizeOnPlay: 0
+  m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -59,10 +58,10 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
-    m_HBaseRangeMin: -234.5
-    m_HBaseRangeMax: 234.5
-    m_VBaseRangeMin: -131.90625
-    m_VBaseRangeMax: 131.90625
+    m_HBaseRangeMin: -375.1111
+    m_HBaseRangeMax: 375.1111
+    m_VBaseRangeMin: -211
+    m_VBaseRangeMax: 211
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -71,7 +70,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
     m_UniformScale: 1
     m_UpDirection: 1
@@ -79,25 +78,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 469
-      height: 314
+      width: 897
+      height: 422
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 234.5, y: 157}
+    m_Translation: {x: 448.5, y: 211}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -234.5
-      y: -157
-      width: 469
-      height: 314
+      x: -448.5
+      y: -211
+      width: 897
+      height: 422
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 469, y: 331}
+  m_LastWindowPixelSize: {x: 897, y: 439}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -114,17 +113,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 4}
-  - {fileID: 11}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 673
-    height: 626
-  m_MinSize: {x: 404, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
-  vertical: 1
-  controlID: 11
+    width: 1536
+    height: 731
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
+  vertical: 0
+  controlID: 3627
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,18 +137,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 5}
-  - {fileID: 7}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 673
-    height: 352
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
-  vertical: 0
-  controlID: 12
+    width: 1221
+    height: 731
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
+  vertical: 1
+  controlID: 3628
 --- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 8}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1221
+    height: 460
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
+  vertical: 0
+  controlID: 3510
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -165,16 +188,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 200
-    height: 352
+    width: 320
+    height: 460
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 6}
+  m_ActualView: {fileID: 7}
   m_Panes:
-  - {fileID: 6}
+  - {fileID: 7}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &6
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -196,16 +219,16 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1
-    y: 100
-    width: 198
-    height: 331
+    x: 0
+    y: 92
+    width: 318
+    height: 439
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 66620000
-    m_LastClickedID: 0
-    m_ExpandedIDs: aae1feff1403ffffce07ffff0612ffff5213ffff2e20ffff9427ffffee33ffff923effff244bffff000000004868000050680000
+    m_SelectedIDs: c02e0000
+    m_LastClickedID: 11968
+    m_ExpandedIDs: 82a8ffffa6c0ffff9efbffff00000000c02e0000d42e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -221,14 +244,14 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 6}
     m_SearchString: 
   m_ExpandedScenes:
-  - GKMenu
+  - QuestSlots
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
---- !u!114 &7
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -242,21 +265,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 200
+    x: 320
     y: 0
-    width: 473
-    height: 352
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+    width: 901
+    height: 460
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
-  - {fileID: 8}
-  - {fileID: 2}
   - {fileID: 9}
-  - {fileID: 10}
+  - {fileID: 2}
   m_Selected: 1
   m_LastSelected: 0
---- !u!114 &8
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -278,28 +299,28 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
-    x: 203
-    y: 100
-    width: 469
-    height: 331
+    x: 322
+    y: 92
+    width: 897
+    height: 439
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 537.0889000892639
+  lastFramingTime: 85347.5252100112
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 413.62595, y: 237.65446, z: -5.8210807}
+    m_Target: {x: 431.29868, y: 189.1921, z: -14.51879}
     speed: 2
-    m_Value: {x: 413.62595, y: 237.65446, z: -5.8210807}
+    m_Value: {x: 431.29868, y: 189.1921, z: -14.51879}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
-    showFog: 0
+    showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 0
-    showFlares: 0
-    showImageEffects: 0
+    showSkybox: 1
+    showFlares: 1
+    showImageEffects: 1
     showParticleSystems: 1
   grid:
     xGrid:
@@ -319,9 +340,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 773.55994
+    m_Target: 617.777
     speed: 2
-    m_Value: 773.55994
+    m_Value: 617.777
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -333,77 +354,7 @@ MonoBehaviour:
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &9
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12111, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AutoRepaintOnSceneChange: 0
-  m_MinSize: {x: 400, y: 100}
-  m_MaxSize: {x: 2048, y: 2048}
-  m_TitleContent:
-    m_Text: Asset Store
-    m_Image: {fileID: 357073275683767465, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_DepthBufferBits: 0
-  m_Pos:
-    serializedVersion: 2
-    x: 271
-    y: 92
-    width: 816
-    height: 343
-  m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &10
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AutoRepaintOnSceneChange: 1
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animator
-    m_Image: {fileID: 663490763026382308, guid: 0000000000000000d000000000000000,
-      type: 0}
-    m_Tooltip: 
-  m_DepthBufferBits: 0
-  m_Pos:
-    serializedVersion: 2
-    x: 271
-    y: 92
-    width: 816
-    height: 343
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_ViewTransforms:
-    m_KeySerializationHelper: []
-    m_ValueSerializationHelper: []
-  m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 0}
-  m_BreadCrumbs: []
-  stateMachineGraph: {fileID: 0}
-  stateMachineGraphGUI: {fileID: 0}
-  blendTreeGraph: {fileID: 0}
-  blendTreeGraphGUI: {fileID: 0}
-  m_AutoLiveLink: 1
-  m_MiniTool: 0
-  m_SerializedLocked: 0
-  m_CurrentEditor: 0
-  m_LayerEditor:
-    m_SelectedLayerIndex: 0
---- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -418,18 +369,18 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 352
-    width: 673
-    height: 274
+    y: 460
+    width: 1221
+    height: 271
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 11}
   m_Panes:
+  - {fileID: 11}
   - {fileID: 12}
-  - {fileID: 13}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &12
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -451,10 +402,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1
-    y: 452
-    width: 671
-    height: 253
+    x: 0
+    y: 552
+    width: 1219
+    height: 250
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -474,14 +425,13 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Main Game/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\CyberGW\Documents\Unity\SEPRPhase3\EvilGeese\Goosy Kong\Goosy
-    Kong
+  m_LastProjectPath: C:\Users\clubs\Documents\EvilGeese-masterb\Unusual Geese
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 119}
-    m_SelectedIDs: ea670000
-    m_LastClickedID: 26602
-    m_ExpandedIDs: 00000000ec610000d06200006e63000074640000b267000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 341}
+    m_SelectedIDs: 802b0000
+    m_LastClickedID: 11136
+    m_ExpandedIDs: 00000000f427000068280000dc2800004429000068290000c8290000ce290000482b0000422c0000442c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -497,7 +447,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -509,7 +459,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ec6100006e63000074640000b2670000
+    m_ExpandedIDs: 00000000f427000068280000dc2800004429000068290000c8290000ce290000482b0000422c0000442c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -534,10 +484,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 66620000
-    m_LastClickedInstanceID: 25190
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000008330000aa38000000000000
+    m_SelectedInstanceIDs: c02e0000
+    m_LastClickedInstanceID: 11968
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300007e280000442a00005a2f0000542a0000802b0000002a000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -553,7 +503,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -563,8 +513,8 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
-  m_DirectoriesAreaWidth: 115
---- !u!114 &13
+  m_DirectoriesAreaWidth: 139
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -586,12 +536,12 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 8
-    y: 448
-    width: 1071
+    x: 0
+    y: 552
+    width: 1219
     height: 250
   m_PersistentViewDataDictionary: {fileID: 0}
---- !u!114 &14
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -605,18 +555,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 673
+    x: 1221
     y: 0
-    width: 277
-    height: 626
+    width: 315
+    height: 731
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 14}
   m_Panes:
+  - {fileID: 14}
   - {fileID: 15}
   m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &15
+  m_LastSelected: 1
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_PrefabParentObject: {fileID: 0}
@@ -638,10 +589,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 676
-    y: 100
-    width: 275
-    height: 605
+    x: 1223
+    y: 92
+    width: 313
+    height: 710
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
@@ -650,3 +601,389 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AutoRepaintOnSceneChange: 0
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_DepthBufferBits: 0
+  m_Pos:
+    serializedVersion: 2
+    x: 1088
+    y: 92
+    width: 278
+    height: 614
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 15}
+    newResultList:
+    - id: '[Curious Geese][suite]'
+      name: Curious Geese
+      fullName: Curious Geese
+      resultStatus: 1
+      duration: 16.66198
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[C:/Users/clubs/Documents/EvilGeese-masterb/Unusual Geese/Library/ScriptAssemblies/Assembly-CSharp.dll][suite]'
+      name: Assembly-CSharp.dll
+      fullName: C:/Users/clubs/Documents/EvilGeese-masterb/Unusual Geese/Library/ScriptAssemblies/Assembly-CSharp.dll
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp][CombatSystemTests][suite]'
+      name: CombatSystemTests
+      fullName: CombatSystemTests
+      resultStatus: 1
+      duration: 0.0577305
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp][CombatSystemTests.CombatSystemCharacterDamage]'
+      name: CombatSystemCharacterDamage
+      fullName: CombatSystemTests.CombatSystemCharacterDamage
+      resultStatus: 1
+      duration: 0.0356151
+      messages: 
+      output: "1\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][DialogSystemTests][suite]'
+      name: DialogSystemTests
+      fullName: DialogSystemTests
+      resultStatus: 1
+      duration: 0.3318942
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp][DialogSystemTests.DialogSystemConditionalConstantEvaluations]'
+      name: DialogSystemConditionalConstantEvaluations
+      fullName: DialogSystemTests.DialogSystemConditionalConstantEvaluations
+      resultStatus: 1
+      duration: 0.0348905
+      messages: 
+      output: "I exist\r\nthe gamestate was null, creating new gamestate\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][DialogSystemTests.DialogSystemConditionalGamevarEvaluations]'
+      name: DialogSystemConditionalGamevarEvaluations
+      fullName: DialogSystemTests.DialogSystemConditionalGamevarEvaluations
+      resultStatus: 1
+      duration: 0.0334823
+      messages: 
+      output: "I exist\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][DialogSystemTests.DialogSystemConditionalItemEvaluations]'
+      name: DialogSystemConditionalItemEvaluations
+      fullName: DialogSystemTests.DialogSystemConditionalItemEvaluations
+      resultStatus: 1
+      duration: 0.0343584
+      messages: 
+      output: "I exist\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][DialogSystemTests.DialogSystemConditionalMoneyEvaluations]'
+      name: DialogSystemConditionalMoneyEvaluations
+      fullName: DialogSystemTests.DialogSystemConditionalMoneyEvaluations
+      resultStatus: 1
+      duration: 0.0339988
+      messages: 
+      output: "I exist\r\n1\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][DialogSystemTests.DialogSystemConditionalStaticEvaluations]'
+      name: DialogSystemConditionalStaticEvaluations
+      fullName: DialogSystemTests.DialogSystemConditionalStaticEvaluations
+      resultStatus: 1
+      duration: 0.0332979
+      messages: 
+      output: "I exist\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GameStateTests][suite]'
+      name: GameStateTests
+      fullName: GameStateTests
+      resultStatus: 1
+      duration: 3.0888083
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp][GameStateTests.GameStateInitalizedEmpty]'
+      name: GameStateInitalizedEmpty
+      fullName: GameStateTests.GameStateInitalizedEmpty
+      resultStatus: 1
+      duration: 0.037119
+      messages: 
+      output: "I exist\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GameStateTests.GameStateRetainsGameVars]'
+      name: GameStateRetainsGameVars
+      fullName: GameStateTests.GameStateRetainsGameVars
+      resultStatus: 1
+      duration: 0.0332072
+      messages: 
+      output: "I exist\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GameStateTests.GameStateRetainsInventoryItems]'
+      name: GameStateRetainsInventoryItems
+      fullName: GameStateTests.GameStateRetainsInventoryItems
+      resultStatus: 1
+      duration: 0.0331986
+      messages: 
+      output: "I exist\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GameStateTests.GameStateRetainsMoney]'
+      name: GameStateRetainsMoney
+      fullName: GameStateTests.GameStateRetainsMoney
+      resultStatus: 1
+      duration: 0.0347731
+      messages: 
+      output: "I exist\r\n2\r\n-1\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GameStateTests.GameStateSavesCorrectly]'
+      name: GameStateSavesCorrectly
+      fullName: GameStateTests.GameStateSavesCorrectly
+      resultStatus: 1
+      duration: 2.5281587
+      messages: 
+      output: "I exist\r\nComputerScience\r\nX: 0\r\nI exist\r\nthe gameVar \"StartDialog\"
+        is undefined, using the \"start\" dialog\r\n1\r\nComputerScience\r\nX: 0\r\nComputerScience\r\nX:
+        0\r\nI exist\r\nthe gameVar \"StartDialog\" is undefined, using the \"start\"
+        dialog\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GoosyKongTests][suite]'
+      name: GoosyKongTests
+      fullName: GoosyKongTests
+      resultStatus: 1
+      duration: 12.894886
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp][GoosyKongTests.AGooseMovement]'
+      name: AGooseMovement
+      fullName: GoosyKongTests.AGooseMovement
+      resultStatus: 1
+      duration: 5.4891577
+      messages: 
+      output: "Main\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GoosyKongTests.BGooseJumpAndPlatformCollisions]'
+      name: BGooseJumpAndPlatformCollisions
+      fullName: GoosyKongTests.BGooseJumpAndPlatformCollisions
+      resultStatus: 1
+      duration: 1.0356919
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GoosyKongTests.CPortalAndMoneyTest]'
+      name: CPortalAndMoneyTest
+      fullName: GoosyKongTests.CPortalAndMoneyTest
+      resultStatus: 1
+      duration: 0.9569462
+      messages: 
+      output: "Main 1\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GoosyKongTests.DBarrelCollision]'
+      name: DBarrelCollision
+      fullName: GoosyKongTests.DBarrelCollision
+      resultStatus: 1
+      duration: 5.2763243
+      messages: 
+      output: "Here\r\nHere\r\nHere\r\nEndGame\r\nEndGame\r\nEndGame\r\n"
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    - id: '[Assembly-CSharp][GridSystemTests][suite]'
+      name: GridSystemTests
+      fullName: GridSystemTests
+      resultStatus: 1
+      duration: 0.0502787
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    - id: '[Assembly-CSharp][GridSystemTests.GridSystemCollisions]'
+      name: GridSystemCollisions
+      fullName: GridSystemTests.GridSystemCollisions
+      resultStatus: 1
+      duration: 0.0181947
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+    m_ResultText: Curious Geese (16.662s)
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 0584025a
+      m_LastClickedID: 1510114309
+      m_ExpandedIDs: f0a18d916b874daeb6da56ae1c3bc0e1ad070ef21e2817353ad12e590584025abd0a7b5fffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories: []
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 15}
+    newResultList:
+    - id: '[Playing around][suite]'
+      name: Playing around
+      fullName: Playing around
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories: []

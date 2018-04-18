@@ -49,7 +49,7 @@ public class SlotsManager : MonoBehaviour {
 				GameObject g = Instantiate (slotPanel, this.transform);
 				slotObjects [m].Add (g);
 				g.SetActive (true);
-				g.transform.position += new Vector3 (offsetX, 0f) * (m - 1);
+				g.transform.localPosition += new Vector3 (offsetX, 0f) * (m - 1);
 				switch (m) {
 				case 0:
 					g.transform.Find ("Text").gameObject.GetComponent<UnityEngine.UI.Text> ().text = QuestData.stage1Text (quest1types [i % quest1types.Length]);
@@ -116,8 +116,8 @@ public class SlotsManager : MonoBehaviour {
 			pos = Mathf.Repeat (pos, c);
 			pos -= 2;
 			if (Mathf.Clamp (pos, -2f, 2f) == pos) {
-				Vector3 prev = slots [i].transform.position;
-				slots [i].transform.position = new Vector3 (prev.x, -Mathf.Sin (pos/4 * Mathf.PI) * 2 * offsetY + slotPanel.transform.position.y);
+				Vector3 prev = slots [i].transform.localPosition;
+				slots [i].transform.localPosition = new Vector3 (prev.x, -Mathf.Sin (pos/4 * Mathf.PI) * 2 * offsetY + slotPanel.transform.position.y);
 				slots [i].transform.localScale = new Vector3 (1f, Mathf.Cos (pos/4 * Mathf.PI));
 			} else {
 				slots [i].transform.localScale = new Vector3 (1f, 0f);

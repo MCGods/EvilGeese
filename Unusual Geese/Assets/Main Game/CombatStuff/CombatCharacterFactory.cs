@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 
 /// <summary>
+/// [EXTENSION ASSESSMENT 4] - added Gorrilla character 
 /// [EXTENSIONS] - Added bonusHealth and bonusAttack stats to allow characters to grow stronger
 /// [CHANGES] - Changed BobbyBard character type
 /// 		  - Add bonus health to character types so that they can become stronger
@@ -97,7 +98,7 @@ public static class CombatCharacterFactory {
         case CombatCharacterPresets.ViceChancellor:
             return 1000;
 		case CombatCharacterPresets.Gorilla:
-			return 250;
+			return 250 + bonusHealth;
 		}
 		return 1;
 	}
@@ -153,6 +154,10 @@ public static class CombatCharacterFactory {
 			break;
         case CombatCharacterPresets.ViceChancellor:
             break;
+		case CombatCharacterPresets.Gorilla:
+			abilities.Add (new SimpleAttack (90, 200, "melee", 50, "Rip"));
+			abilities.Add (new SimpleAttack (120, 180, "melee", 50, "Tear"));
+			break;
 		}
 		return abilities;
 	}
@@ -252,6 +257,16 @@ public static class CombatCharacterFactory {
             frames.Add(Resources.Load<Sprite>("Sprites/ViceChancellor/ViceChancellor2"));
             sprites.Add("attack", frames);
             break;
+		
+		case CombatCharacterPresets.Gorilla:
+			frames = new List<Sprite> ();
+			frames.Add (Resources.Load<Sprite> ("Sprites/Gorilla/z4"));
+			sprites.Add ("base", frames);
+			frames = new List<Sprite> ();
+			frames.Add (Resources.Load<Sprite> ("Sprites/Gorilla/z5"));
+			frames.Add (Resources.Load<Sprite> ("Sprites/Gorilla/z6"));
+			sprites.Add ("attack", frames);
+			break;
 		}
 		return sprites;
 	

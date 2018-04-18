@@ -22,6 +22,7 @@ public class ButtonManager : MonoBehaviour {
 		state.currentTeam.Add (CombatCharacterFactory.CombatCharacterPresets.CharlieCleric);
 		state.availibleCharacters.Add (CombatCharacterFactory.CombatCharacterPresets.MabelMage);
 		state.currentTeam.Add (CombatCharacterFactory.CombatCharacterPresets.MabelMage);
+		state.availibleCharacters.Add (CombatCharacterFactory.CombatCharacterPresets.Gorilla);
 		SceneManager.LoadScene ("Main Game/" + newGameScene);
 	}
 
