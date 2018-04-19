@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SlotsManager : MonoBehaviour {
+	public GameObject acceptButton;
+	public GameObject rejectButton;
 	GameObject slotPanel;
 	List<GameObject>[] slotObjects;
 
@@ -24,7 +26,6 @@ public class SlotsManager : MonoBehaviour {
 	QuestData.Stage2QuestTypes[] quest2types;
 	QuestData.Stage3QuestTypes[] quest3types;
 
-	float afterStopDelay = 5f; // how long to wait after the wheels have stopped before switching scenes
 
 
 	// Use this for initialization
@@ -101,11 +102,8 @@ public class SlotsManager : MonoBehaviour {
 		}
 
 		if (stopping == 3) {
-			afterStopDelay -= Time.deltaTime;
-			if (afterStopDelay < 0) {
-				SceneManager.LoadScene ("Main Game/Scenes/ComputerScience");
-			}
-			
+			acceptButton.SetActive (true);
+			rejectButton.SetActive (true);
 		}
 	}
 
@@ -117,12 +115,33 @@ public class SlotsManager : MonoBehaviour {
 			pos -= 2;
 			if (Mathf.Clamp (pos, -2f, 2f) == pos) {
 				Vector3 prev = slots [i].transform.localPosition;
-				slots [i].transform.localPosition = new Vector3 (prev.x, -Mathf.Sin (pos/4 * Mathf.PI) * 2 * offsetY + slotPanel.transform.position.y);
+				slots [i].transform.localPosition = new Vector3 (prev.x, -Mathf.Sin (pos/4 * Mathf.PI) * offsetY + slotPanel.transform.position.y + 30);
 				slots [i].transform.localScale = new Vector3 (1f, Mathf.Cos (pos/4 * Mathf.PI));
 			} else {
 				slots [i].transform.localScale = new Vector3 (1f, 0f);
 			}
 			pos -= 1f;
 		}
+	}
+
+	public void doAccept(){
+		SceneManager.LoadScene ("Main Game/Scenes/ComputerScience");
+	}
+
+	public void doReject(){
+		for (int i = 0; i < 3; i++) {
+			stopAt [i] = UnityEngine.Random.Range (0, slotObjects [i].Count - 1);
+			spinSpeeds [i] = startSpeeds [i];
+		}
+		stopping = 0;
+		acceptButton.SetActive (false);
+		rejectButton.SetActive (false);
+		freeSpins = 2f;
+		canStop = false;
+
+		GameStateManager state = GameStateManager.getGameStateManager ();
+		state.state.s1Quest = quest1types [stopAt [0] % quest1types.Length];
+		state.state.s2Quest = quest2types [stopAt [1] % quest2types.Length];
+		state.state.s3Quest = quest3types [stopAt [2] % quest3types.Length];
 	}
 }
