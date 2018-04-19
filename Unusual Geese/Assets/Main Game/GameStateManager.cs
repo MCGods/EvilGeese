@@ -110,18 +110,21 @@ public class GameStateManager : MonoBehaviour{
 		if (state.questState == 0) {
 			if (QuestData.stage1Complete (state.s1Quest)) {
 				state.questState++;
+				Instantiate(Resources.Load<GameObject>("QuestPopup"));
 			}
 		}
 
 		if (state.questState == 1) {
 			if (QuestData.stage2Complete (state.s2Quest)) {
 				state.questState++;
+				Instantiate(Resources.Load<GameObject>("QuestPopup"));
 			}
 		}
 
 		if (state.questState == 2) {
 			if (QuestData.stage3Complete (state.s3Quest)) {
 				state.questState++;
+				Instantiate(Resources.Load<GameObject>("QuestPopup"));
 			}
 		}
 	}

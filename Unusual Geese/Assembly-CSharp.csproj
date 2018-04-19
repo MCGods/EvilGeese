@@ -96,6 +96,7 @@
      <Compile Include="Assets\Main Game\PauseMenuManager.cs" />
      <Compile Include="Assets\Main Game\PlayerMovement.cs" />
      <Compile Include="Assets\Main Game\Quest Stuff\QuestData.cs" />
+     <Compile Include="Assets\Main Game\Quest Stuff\QuestPopupManager.cs" />
      <Compile Include="Assets\Main Game\Quest Stuff\SlotsManager.cs" />
      <Compile Include="Assets\Main Game\SoundManager.cs" />
      <Compile Include="Assets\Main Game\Unit tests\CombatSystemTests.cs" />
