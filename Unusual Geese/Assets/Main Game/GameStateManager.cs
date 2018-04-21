@@ -111,6 +111,7 @@ public class GameStateManager : MonoBehaviour{
 			if (QuestData.stage1Complete (state.s1Quest)) {
 				state.questState++;
 				Instantiate(Resources.Load<GameObject>("QuestPopup"));
+				state.money += 50;
 			}
 		}
 
@@ -118,6 +119,7 @@ public class GameStateManager : MonoBehaviour{
 			if (QuestData.stage2Complete (state.s2Quest)) {
 				state.questState++;
 				Instantiate(Resources.Load<GameObject>("QuestPopup"));
+				state.money += 100;
 			}
 		}
 
@@ -125,6 +127,7 @@ public class GameStateManager : MonoBehaviour{
 			if (QuestData.stage3Complete (state.s3Quest)) {
 				state.questState++;
 				Instantiate(Resources.Load<GameObject>("QuestPopup"));
+				state.money += 200;
 			}
 		}
 	}
