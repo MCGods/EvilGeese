@@ -104,6 +104,7 @@
      <Compile Include="Assets\Main Game\Unit tests\GameStateTests.cs" />
      <Compile Include="Assets\Main Game\Unit tests\GoosyKongTests.cs" />
      <Compile Include="Assets\Main Game\Unit tests\GridSystemTests.cs" />
+     <Compile Include="Assets\Main Game\Unit tests\QuestTests.cs" />
      <Compile Include="Assets\Main Game\WorldInteraction.cs" />
      <Compile Include="Assets\Main Game\WorldMap\WorldMapButton.cs" />
      <None Include="Assets\Goosy Kong\Assets4DK\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />

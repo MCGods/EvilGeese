@@ -1,19 +1,22 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Main Game\CombatStuff\CombatCharacter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Main Game\GameStateManager.cs">
     <Files>
-      <File FileName="Assets\Main Game\GameStateManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Main Game\GameStateManager.cs" Line="130" Column="24" />
       <File FileName="Assets\Main Game\Unit tests\CombatSystemTests.cs" Line="1" Column="1" />
       <File FileName="Assets\Main Game\Unit tests\GridSystemTests.cs" Line="1" Column="1" />
       <File FileName="Assets\Main Game\InventoryItems.cs" Line="1" Column="1" />
-      <File FileName="Assets\Main Game\CombatStuff\CombatCharacterFactory.cs" Line="1" Column="1" />
+      <File FileName="Assets\Main Game\CombatStuff\CombatCharacterFactory.cs" Line="269" Column="10" />
       <File FileName="Assets\Main Game\Quest Stuff\QuestData.cs" Line="1" Column="1" />
       <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\EndGame.cs" Line="1" Column="1" />
       <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\RestartUponDeath.cs" Line="1" Column="1" />
       <File FileName="Assets\Goosy Kong\Assets4DK\Scripts\Portal.cs" Line="1" Column="1" />
       <File FileName="Assets\Main Game\Dialog stuff\DialogConditional.cs" Line="1" Column="1" />
-      <File FileName="Assets\Main Game\Menu\Scripts\ButtonManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Main Game\CombatStuff\CombatCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Main Game\Menu\Scripts\ButtonManager.cs" Line="25" Column="89" />
+      <File FileName="Assets\Main Game\Quest Stuff\SlotsManager.cs" Line="140" Column="19" />
+      <File FileName="Assets\Main Game\Quest Stuff\QuestPopupManager.cs" Line="17" Column="30" />
+      <File FileName="Assets\Main Game\InputManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Main Game\PauseMenuManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
