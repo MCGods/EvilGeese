@@ -216,6 +216,9 @@ public class CombatManager : MonoBehaviour {
 			CombatAbility tempValue = a; // necessary to deal with weird scoping
 			newButton.onClick.AddListener (delegate {selectAbility(tempValue);});
 
+			if (attacker.energy < tempValue.energyCost) {
+				newButton.interactable = false;
+			}
 		}
 
 
@@ -316,9 +319,11 @@ public class CombatManager : MonoBehaviour {
 
 	// function called when an abililty button on abilities panel is pressed
 	void selectAbility(CombatAbility ability){
-		attack = ability;
-		currentStage = turnStages.targetSelection;
-		targetsRemaining = attack.maxTargets;
+		if (attacker.energy >= ability.energyCost) {
+			attack = ability;
+			currentStage = turnStages.targetSelection;
+			targetsRemaining = attack.maxTargets;
+		}
 	}
 
 	// function called when a target is clicked during the target selection phase

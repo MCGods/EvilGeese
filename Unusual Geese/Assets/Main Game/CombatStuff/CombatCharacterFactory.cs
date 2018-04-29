@@ -35,7 +35,7 @@ public static class CombatCharacterFactory {
 		int characterMaxHealth = GetCharacterMaxhealth (characterType);
 		int characterMaxEnergy = GetCharacterMaxEnergy (characterType);
 		CombatAbility basicAttack = getCharacterBasicAttack (characterType);
-		newCharacter = new CombatCharacter(characterMaxHealth, characterMaxHealth, characterMaxEnergy, characterMaxEnergy, basicAttack);
+		newCharacter = new CombatCharacter(characterMaxHealth, characterMaxHealth, characterMaxEnergy, 0, basicAttack);
 		List<CombatAbility> abilities = GetCharacterAbilities (characterType);
 		foreach (CombatAbility ability in abilities) {
 			newCharacter.AddAbility (ability);
@@ -260,11 +260,11 @@ public static class CombatCharacterFactory {
 		
 		case CombatCharacterPresets.Gorilla:
 			frames = new List<Sprite> ();
-			frames.Add (Resources.Load<Sprite> ("Sprites/Gorilla/z4"));
+			frames.Add (Resources.Load<Sprite> ("Sprites/Gorrilla/z4"));
 			sprites.Add ("base", frames);
 			frames = new List<Sprite> ();
-			frames.Add (Resources.Load<Sprite> ("Sprites/Gorilla/z5"));
-			frames.Add (Resources.Load<Sprite> ("Sprites/Gorilla/z6"));
+			frames.Add (Resources.Load<Sprite> ("Sprites/Gorrilla/z5"));
+			frames.Add (Resources.Load<Sprite> ("Sprites/Gorrilla/z6"));
 			sprites.Add ("attack", frames);
 			break;
 		}
