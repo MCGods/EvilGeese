@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 
 public class Portal : MonoBehaviour {
@@ -37,11 +38,15 @@ public class Portal : MonoBehaviour {
 	// give player correct amount of money for each level
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "Goose") {
-			GameStateManager state = GameObject.Find ("GameStateManager").GetComponent<GameStateManager> ();
-			int highScore = 0;
-			int.TryParse (state.getGameVar ("GoosyKongHighScore"), out highScore);
-			if (currentScene + 1 > highScore) {
-				state.setGameVar ("GoosyKongHighScore", PlayerPrefs.GetInt ("Reward").ToString ());
+			try {
+				GameStateManager state = GameObject.Find ("GameStateManager").GetComponent<GameStateManager> ();
+				int highScore = 0;
+				int.TryParse (state.getGameVar ("GoosyKongHighScore"), out highScore);
+				if (currentScene + 1 > highScore) {
+					state.setGameVar ("GoosyKongHighScore", PlayerPrefs.GetInt ("Reward").ToString ());
+					}
+			} catch (NullReferenceException e){
+				Debug.Log ("no GameStateFound");
 			}
 			
 			if(currentScene == 0){
