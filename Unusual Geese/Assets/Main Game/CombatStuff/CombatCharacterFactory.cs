@@ -34,6 +34,7 @@ public static class CombatCharacterFactory {
 		CombatCharacter newCharacter = null;
 		int characterMaxHealth = GetCharacterMaxhealth (characterType);
 		int characterMaxEnergy = GetCharacterMaxEnergy (characterType);
+		Debug.Log (characterMaxEnergy);
 		CombatAbility basicAttack = getCharacterBasicAttack (characterType);
 		newCharacter = new CombatCharacter(characterMaxHealth, characterMaxHealth, characterMaxEnergy, characterMaxEnergy, basicAttack);
 		List<CombatAbility> abilities = GetCharacterAbilities (characterType);
@@ -112,7 +113,7 @@ public static class CombatCharacterFactory {
 		case CombatCharacterPresets.MabelMage:
 			return 130;
 		case CombatCharacterPresets.PamelaPaladin:
-			return 60;
+			return 80;
 		case CombatCharacterPresets.WalterWizard:
 			return 150;
 		case CombatCharacterPresets.SusanShapeShifter:
