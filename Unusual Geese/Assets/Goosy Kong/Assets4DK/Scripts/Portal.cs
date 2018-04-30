@@ -28,7 +28,6 @@ public class Portal : MonoBehaviour {
 	public void LeaveToMain(){
 		GameStateManager state = GameObject.Find ("GameStateManager").GetComponent<GameStateManager> ();
 		state.giveMoney (PlayerPrefs.GetInt ("Reward"));
-		state.setGameVar ("GoosyKongHighScore", PlayerPrefs.GetInt ("Reward").ToString ());
 		state.tryQuestProgression ();
 		SceneManager.LoadScene ("GKMenu");
 	}
@@ -38,6 +37,12 @@ public class Portal : MonoBehaviour {
 	// give player correct amount of money for each level
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.name == "Goose") {
+			GameStateManager state = GameObject.Find ("GameStateManager").GetComponent<GameStateManager> ();
+			int highScore = 0;
+			int.TryParse (state.getGameVar ("GoosyKongHighScore"), out highScore);
+			if (currentScene + 1 > highScore) {
+				state.setGameVar ("GoosyKongHighScore", PlayerPrefs.GetInt ("Reward").ToString ());
+			}
 			
 			if(currentScene == 0){
 				x = PlayerPrefs.GetInt ("Reward");

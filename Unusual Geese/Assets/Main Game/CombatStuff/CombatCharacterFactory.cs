@@ -35,7 +35,7 @@ public static class CombatCharacterFactory {
 		int characterMaxHealth = GetCharacterMaxhealth (characterType);
 		int characterMaxEnergy = GetCharacterMaxEnergy (characterType);
 		CombatAbility basicAttack = getCharacterBasicAttack (characterType);
-		newCharacter = new CombatCharacter(characterMaxHealth, characterMaxHealth, characterMaxEnergy, 0, basicAttack);
+		newCharacter = new CombatCharacter(characterMaxHealth, characterMaxHealth, characterMaxEnergy, 50, basicAttack);
 		List<CombatAbility> abilities = GetCharacterAbilities (characterType);
 		foreach (CombatAbility ability in abilities) {
 			newCharacter.AddAbility (ability);
