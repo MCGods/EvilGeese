@@ -789,7 +789,7 @@ MonoBehaviour:
   dialogDataValues:
   - speekerName: The Narrator
     dialogText: You and your friends wake up outside the Computer Science building.
-      what Happened last night?!
+      What happened last night?!
     optionDescription:
     - Continue
     optionPointer:
