@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// [NEW FOR ASSESMENT 4]
+/// Quest popup manager.
+/// </summary>
 public class QuestPopupManager : MonoBehaviour {
 	float timeToDisplay = 3f;
 

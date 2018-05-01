@@ -30,6 +30,7 @@ public class SlotsManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		// the lists of each type of quest
 		quest1types = (QuestData.Stage1QuestTypes[])Enum.GetValues (typeof(QuestData.Stage1QuestTypes));
 		quest2types = (QuestData.Stage2QuestTypes[])Enum.GetValues (typeof(QuestData.Stage2QuestTypes));
 		quest3types = (QuestData.Stage3QuestTypes[])Enum.GetValues (typeof(QuestData.Stage3QuestTypes));
@@ -43,6 +44,7 @@ public class SlotsManager : MonoBehaviour {
 		spinSpeeds = new float[3];
 		slotObjects = new List<GameObject>[3];
 		stopAt = new int[3];
+		//create and set inital positions of each of the panels in the slots system.
 		for (int m = 0; m <= 2; m++) {
 			spinSpeeds [m] = startSpeeds [m];
 			slotObjects [m] = new List<GameObject> ();
@@ -51,6 +53,7 @@ public class SlotsManager : MonoBehaviour {
 				slotObjects [m].Add (g);
 				g.SetActive (true);
 				g.transform.localPosition += new Vector3 (offsetX, 0f) * (m - 1);
+				//get text for the panels
 				switch (m) {
 				case 0:
 					g.transform.Find ("Text").gameObject.GetComponent<UnityEngine.UI.Text> ().text = QuestData.stage1Text (quest1types [i % quest1types.Length]);
@@ -80,6 +83,7 @@ public class SlotsManager : MonoBehaviour {
 			currentPos [i] %= slotObjects [i].Count;
 			setSlotsScale (slotObjects [i], currentPos [i]);
 
+			// logic to check that wheels have spun enough before they start to slow down
 			if (i == stopping) {
 				freeSpins = Mathf.Max (0f, freeSpins - ((spinSpeeds [i] * Time.deltaTime) / slotObjects [i].Count));
 				distanceToStop = Mathf.Repeat (stopAt [i] - currentPos [i], slotObjects [i].Count);
@@ -87,6 +91,8 @@ public class SlotsManager : MonoBehaviour {
 					canStop = true;
 				}
 			} 
+
+			// logic to slow/stop the wheels 
 			if (i == stopping && canStop) {
 				spinSpeeds [i] = Mathf.Clamp(distanceToStop/slotObjects[i].Count*startSpeeds[i], 0.5f, startSpeeds[i]);
 				if (distanceToStop < 0.1f) {
@@ -115,9 +121,11 @@ public class SlotsManager : MonoBehaviour {
 			pos -= 2;
 			if (Mathf.Clamp (pos, -2f, 2f) == pos) {
 				Vector3 prev = slots [i].transform.localPosition;
+				//trig to correctly scale the panels as though they were attached to a wheel
 				slots [i].transform.localPosition = new Vector3 (prev.x, -Mathf.Sin (pos/4 * Mathf.PI) * offsetY + slotPanel.transform.position.y + 30);
 				slots [i].transform.localScale = new Vector3 (1f, Mathf.Cos (pos/4 * Mathf.PI));
 			} else {
+				//scale to 0 to hide the panels
 				slots [i].transform.localScale = new Vector3 (1f, 0f);
 			}
 			pos -= 1f;
@@ -129,6 +137,7 @@ public class SlotsManager : MonoBehaviour {
 	}
 
 	public void doReject(){
+		//reset variables for another spin.
 		for (int i = 0; i < 3; i++) {
 			stopAt [i] = UnityEngine.Random.Range (0, slotObjects [i].Count - 1);
 			spinSpeeds [i] = startSpeeds [i];

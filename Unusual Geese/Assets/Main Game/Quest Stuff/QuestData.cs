@@ -24,6 +24,11 @@ public static class QuestData {
 		TalkToSomebodyUnconscious
 	}
 
+	/// <summary>
+	/// checks whether a given stage one quest has been completed
+	/// </summary>
+	/// <returns><c>true</c>, if the quest was completed, <c>false</c> otherwise.</returns>
+	/// <param name="quest">Quest.</param>
 	public static bool stage1Complete(Stage1QuestTypes quest){
 		GameStateManager state = GameStateManager.getGameStateManager ();
 		switch (quest) {
@@ -50,6 +55,11 @@ public static class QuestData {
 		return false;
 	}
 
+	/// <summary>
+	/// checks whether a given stage two quest has been completed
+	/// </summary>
+	/// <returns><c>true</c>, if the quest was completed, <c>false</c> otherwise.</returns>
+	/// <param name="quest">Quest.</param>
 	public static bool stage2Complete(Stage2QuestTypes quest){
 		GameStateManager state = GameStateManager.getGameStateManager ();
 		switch (quest) {
@@ -76,6 +86,11 @@ public static class QuestData {
 		return false;
 	}
 
+	/// <summary>
+	/// checks whether a given stage three quest has been completed
+	/// </summary>
+	/// <returns><c>true</c>, if the quest was completed, <c>false</c> otherwise.</returns>
+	/// <param name="quest">Quest.</param>
 	public static bool stage3Complete(Stage3QuestTypes quest){
 		GameStateManager state = GameStateManager.getGameStateManager ();
 		switch (quest) {
@@ -102,6 +117,11 @@ public static class QuestData {
 		return false;
 	}
 
+	/// <summary>
+	/// gets the description of a given stage one quest.
+	/// </summary>
+	/// <returns>The description.</returns>
+	/// <param name="quest">Quest.</param>
 	public static string stage1Text(Stage1QuestTypes quest){
 		switch (quest) {
 		case Stage1QuestTypes.FightDoors:
@@ -116,6 +136,11 @@ public static class QuestData {
 
 	}
 
+	/// <summary>
+	/// gets the description of a given stage two quest.
+	/// </summary>
+	/// <returns>The description.</returns>
+	/// <param name="quest">Quest.</param>
 	public static string stage2Text(Stage2QuestTypes quest){
 		switch (quest) {
 		case Stage2QuestTypes.BuyGrenade:
@@ -130,6 +155,11 @@ public static class QuestData {
 
 	}
 
+	/// <summary>
+	/// gets the description of a given stage three quest.
+	/// </summary>
+	/// <returns>The description.</returns>
+	/// <param name="quest">Quest.</param>
 	public static string stage3Text(Stage3QuestTypes quest){
 		switch (quest) {
 		case Stage3QuestTypes.GoosyKongScore3:
